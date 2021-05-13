@@ -1,0 +1,166 @@
+Mjøndalen
+Makani
+MJO
+5.1	24.6%	3.0	87
+
+
+Molde
+Linde
+MOL
+6.3	17.6%	2.0	86
+
+
+Sarpsborg 08
+Mitov Nilsson
+S08
+5.6	7.6%	5.5	82
+
+
+Odd
+Rossbach
+ODD
+5.6	18.6%	2.0	75
+
+
+Stabæk
+Sandberg
+STB
+5.8	10.9%	3.5	69
+
+
+Strømsgodset
+Myhra
+SIF
+4.7	17.1%	4.5	68
+
+
+Sandefjord
+Storevik
+SAN
+4.6	6.7%	3.8	66
+
+
+FK Haugesund
+Sandvik
+FKH
+5.4	6.2%	1.8	60
+
+
+Vålerenga
+Klaesson
+VIF
+5.0	9.8%	3.2	59
+
+
+Rosenborg
+Lund
+RBK
+5.3	3.0%	0.0	45
+
+
+IK Start
+Deumeland
+IKS
+4.5	2.1%	0.5	43
+
+
+Kristiansund BK
+Mbaye
+KBK
+4.5	5.5%	0.2	39
+
+
+Viking FK
+Østbø
+VIK
+5.0	0.7%	0.0	38
+
+
+Bodø/Glimt
+Khaykin
+BG
+4.6	1.2%	2.8	37
+
+
+Brann
+Ahamada
+BRA
+5.8	1.6%	0.0	31
+
+
+Rosenborg
+Hansen
+RBK
+6.4	5.8%	3.2	31
+
+
+Viking FK
+Austbø
+VIK
+5.3	6.8%	1.7	30
+
+
+Bodø/Glimt
+Smits
+BG
+5.0	0.3%	0.0	26
+
+
+Brann
+Opdal
+BRA
+6.0	0.7%	1.2	19
+
+
+IK Start
+Wichne
+IKS
+4.4	1.1%	1.2	19
+
+
+Kristiansund BK
+Holmen Johansen
+KBK
+4.7	0.7%	0.2	18
+
+
+Aalesunds FK
+A Lie
+AAFK
+4.4	3.2%	1.5	17
+
+
+Aalesunds FK
+Kongshavn
+AAFK
+4.3	7.5%	0.0	13
+
+
+Brann
+Pettersen
+BRA
+4.3	1.1%	0.0	12
+
+
+Vålerenga
+Haug
+VIF
+4.1	5.5%	0.0	12
+
+
+Kristiansund BK
+McDermott
+KBK
+4.9	2.9%	2.8	11
+
+
+Sarpsborg 08
+Falch
+S08
+4.3	0.9%	0.0	8
+
+
+Viking FK
+Crowe
+VIK
+4.0	2.2%	0.0	7
