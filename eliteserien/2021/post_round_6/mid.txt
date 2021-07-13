@@ -1,0 +1,1102 @@
+Rosenborg
+Zachariassen
+RBK
+10.2	50.6%	9.5	66	630
+
+
+Rosenborg
+Hoff
+RBK
+5.5	7.9%	2.2	17	630
+
+
+Brann
+Strand
+BRA
+6.9	6.7%	1.7	15	623
+
+
+Brann
+Taylor
+BRA
+7.4	7.0%	4.2	27	559
+
+
+Bodø/Glimt
+Saltnes
+BG
+10.3	27.8%	2.0	20	540
+
+
+Bodø/Glimt
+Berg
+BG
+6.0	39.3%	4.4	25	540
+
+
+Kristiansund BK
+Hopmark
+KBK
+4.5	17.5%	3.6	20	540
+
+
+Molde
+Hussain
+MOL
+6.3	15.2%	3.2	18	540
+
+
+Molde
+Aursnes
+MOL
+6.5	43.0%	4.0	32	540
+
+
+Tromsø
+Kitolano
+TIL
+7.6	5.5%	5.8	31	540
+
+
+Tromsø
+Yttergård Jenssen
+TIL
+5.0	2.7%	2.4	14	540
+
+
+Vålerenga
+Oldrup Jensen
+VIF
+5.0	2.0%	2.2	13	540
+
+
+Kristiansund BK
+Bye
+KBK
+6.5	1.6%	4.8	26	527
+
+
+Vålerenga
+Dønnum
+VIF
+10.1	41.0%	7.4	39	524
+
+
+Vålerenga
+Bjørdal
+VIF
+8.3	1.5%	2.0	12	520
+
+
+Viking FK
+Torsteinbø
+VIK
+6.3	2.8%	2.0	15	518
+
+
+Bodø/Glimt
+Solbakken
+BG
+9.8	3.9%	4.8	30	510
+
+
+Viking FK
+Bell
+VIK
+5.1	7.7%	1.4	14	498
+
+
+Tromsø
+Mikkelsen
+TIL
+4.6	4.2%	3.2	17	494
+
+
+Brann
+Rasmussen
+BRA
+6.0	0.5%	2.7	17	464
+
+
+Bodø/Glimt
+Sørli
+BG
+9.5	13.1%	5.8	32	459
+
+
+Bodø/Glimt
+Brunstad Fet
+BG
+7.6	5.6%	3.6	24	458
+
+
+Molde
+Hestad
+MOL
+8.3	4.4%	4.4	25	453
+
+
+Molde
+Brynhildsen
+MOL
+7.7	10.7%	4.2	30	445
+
+
+Brann
+Skaanes
+BRA
+5.5	0.8%	2.2	13	435
+
+
+Vålerenga
+Layouni
+VIF
+10.2	4.5%	4.8	26	435
+
+
+Rosenborg
+Holse
+RBK
+7.9	6.1%	5.0	31	431
+
+
+Kristiansund BK
+Diop
+KBK
+4.5	3.8%	2.0	12	419
+
+
+Vålerenga
+Christensen
+VIF
+6.9	3.6%	1.6	9	419
+
+
+Kristiansund BK
+Torgil Gjertsen
+KBK
+7.5	1.8%	4.8	26	410
+
+Tromsø
+Berntsen
+TIL
+5.9	0.4%	2.0	12	400
+
+
+Viking FK
+Fridjónsson
+VIK
+6.6	15.9%	4.6	31	399
+
+
+Rosenborg
+E. Ceïde
+RBK
+8.3	3.0%	2.8	19	391
+
+
+Molde
+Knudtzon
+MOL
+6.9	4.9%	2.0	13	387
+
+
+Kristiansund BK
+Skarsem
+KBK
+5.9	1.1%	3.4	18	367
+
+
+FK Haugesund
+Velde
+FKH
+8.4	3.0%	5.5	22	360
+
+
+FK Haugesund
+Therkildsen
+FKH
+6.0	0.1%	2.5	10	360
+
+
+Lillestrøm
+Åsen
+LSK
+8.0	2.1%	3.5	14	360
+
+
+Odd
+Ròlantsson
+ODD
+6.0	0.1%	2.0	8	360
+
+
+Odd
+Kitolano
+ODD
+5.4	11.5%	2.2	9	360
+
+
+Sarpsborg 08
+Næss
+S08
+4.5	10.3%	2.5	10	360
+
+
+Stabæk
+Skytte
+STB
+6.0	0.9%	4.5	18	360
+
+
+Strømsgodset
+Hove
+SIF
+8.0	2.6%	4.8	19	360
+
+
+Odd
+Lekven
+ODD
+5.0	1.3%	2.2	9	358
+
+
+Strømsgodset
+Stenevik
+SIF
+6.0	0.1%	1.5	6	353
+
+
+Lillestrøm
+Mathew
+LSK
+5.0	0.6%	2.2	9	352
+
+
+Stabæk
+Normann Hansen
+STB
+6.5	1.3%	3.5	14	347
+
+
+Lillestrøm
+Kairinen
+LSK
+6.0	1.2%	3.0	12	344
+
+
+FK Haugesund
+Krygård
+FKH
+5.0	0.3%	2.5	10	338
+
+
+Odd
+Kaasa
+ODD
+6.5	1.1%	3.8	15	338
+
+
+Viking FK
+Kabran
+VIK
+8.1	2.1%	1.8	14	336
+
+
+Sandefjord
+Ordagic
+SAN
+5.0	0.2%	2.8	11	335
+
+
+Stabæk
+Shala
+STB
+6.5	2.0%	4.2	17	332
+
+
+Viking FK
+Tripic
+VIK
+9.5	3.9%	4.8	24	331
+
+
+Mjøndalen
+Sveen
+MJO
+5.5	0.1%	2.5	10	331
+
+
+FK Haugesund
+Sandberg
+FKH
+7.5	1.6%	5.5	22	330
+
+
+Strømsgodset
+Stengel
+SIF
+5.5	1.2%	3.2	13	330
+
+
+Molde
+Wolff Eikrem
+MOL
+12.5	9.9%	4.6	23	322
+
+
+Rosenborg
+Vecchia
+RBK
+9.3	2.6%	2.5	17	322
+
+
+Sandefjord
+Jónsson
+SAN
+5.0	1.2%	3.2	13	310
+
+Kristiansund BK
+Willumsson
+KBK
+6.0	0.1%	2.0	10	301
+
+
+Molde
+Ulland Andersen
+MOL
+8.3	4.2%	1.2	16	299
+
+
+Sarpsborg 08
+Lindseth
+S08
+6.5	2.5%	5.8	23	295
+
+
+Lillestrøm
+Gustafsson
+LSK
+6.5	0.3%	2.5	10	294
+
+
+Sandefjord
+Singh
+SAN
+5.9	0.4%	1.8	7	286
+
+
+Kristiansund BK
+P. Ulvestad
+KBK
+4.5	1.8%	1.8	10	277
+
+
+Mjøndalen
+Ovenstad
+MJO
+5.0	1.5%	4.2	17	275
+
+
+Sandefjord
+Normann Hansen
+SAN
+5.5	1.5%	5.2	21	274
+
+
+Mjøndalen
+Brustad
+MJO
+5.9	0.5%	2.2	9	273
+
+
+Sarpsborg 08
+Halvorsen
+S08
+6.5	0.6%	3.8	15	271
+
+
+Rosenborg
+Skjelbred
+RBK
+5.5	0.3%	1.8	11	270
+
+
+Mjøndalen
+Stavås Skistad
+MJO
+5.0	0.1%	1.8	7	270
+
+
+Odd
+Jørgensen
+ODD
+4.5	3.8%	4.0	16	269
+
+
+Strømsgodset
+Gulliksen
+SIF
+4.5	0.6%	2.2	9	268
+
+
+Mjøndalen
+Brochmann
+MJO
+6.0	1.6%	4.0	16	266
+
+
+Viking FK
+Løkberg
+VIK
+4.9	2.0%	0.8	5	265
+
+
+Brann
+Simba
+BRA
+7.0	0.4%	2.2	13	259
+
+
+Brann
+Barmen
+BRA
+5.3	1.6%	0.8	6	256
+
+
+Tromsø
+Antonsen
+TIL
+5.9	0.1%	1.2	7	256
+
+
+Mjøndalen
+Sebulonsen
+MJO
+5.4	0.2%	3.0	15	253
+
+
+Sarpsborg 08
+Salétros
+S08
+6.5	0.5%	1.8	7	251
+
+
+Sandefjord
+Brenden
+SAN
+5.0	0.1%	1.5	6	242
+
+
+Odd
+Svendsen
+ODD
+7.0	2.9%	3.5	14	239
+
+
+Viking FK
+Nilsen Tangen
+VIK
+4.5	0.5%	2.8	15	236
+
+
+Kristiansund BK
+Kartum
+KBK
+5.8	0.4%	2.4	14	235
+
+
+Stabæk
+Edvardsen
+STB
+7.0	6.8%	3.8	15	219
+
+
+Rosenborg
+Tagseth
+RBK
+5.5	0.5%	1.5	9	205
+
+
+Vålerenga
+Sahraoui
+VIF
+8.0	5.8%	1.8	13	205
+
+
+Sandefjord
+Nyenetue
+SAN
+5.0	0.1%	2.2	9	196
+
+
+Brann
+Delaveris
+BRA
+7.3	0.5%	0.8	7	193
+
+Odd
+Wallem
+ODD
+5.5	0.1%	1.5	6	192
+
+
+Strømsgodset
+Maigaard
+SIF
+7.9	0.2%	1.0	4	185
+
+
+Stabæk
+Torgersen
+STB
+4.5	0.2%	1.8	7	182
+
+
+Strømsgodset
+Ingimundarson
+SIF
+6.5	0.1%	1.5	6	180
+
+
+FK Haugesund
+Leite
+FKH
+5.0	0.6%	2.2	9	169
+
+
+Stabæk
+Solbakken
+STB
+5.5	0.6%	1.8	7	168
+
+
+Lillestrøm
+Mathisen
+LSK
+4.5	0.2%	1.5	6	166
+
+
+Lillestrøm
+Krogstad
+LSK
+5.5	0.3%	1.2	5	164
+
+
+Stabæk
+Geelmuyden
+STB
+5.9	0.2%	1.2	5	138
+
+
+Viking FK
+de Lanlay
+VIK
+7.5	0.2%	0.8	4	137
+
+
+Mjøndalen
+Aasmundsen
+MJO
+4.9	0.2%	1.0	4	120
+
+
+Sandefjord
+Vallés
+SAN
+5.0	0.0%	2.0	8	117
+
+
+Mjøndalen
+Olden Larsen
+MJO
+5.9	0.2%	2.5	10	113
+
+
+Bodø/Glimt
+Hagen
+BG
+4.9	0.3%	0.8	5	111
+
+
+Sarpsborg 08
+Ofkir
+S08
+6.4	0.2%	0.8	3	108
+
+
+Bodø/Glimt
+Vetlesen
+BG
+7.1	1.9%	1.2	7	102
+
+
+Mjøndalen
+Gauseth
+MJO
+5.0	0.8%	1.0	4	85
+
+
+Sandefjord
+Södlund
+SAN
+5.4	0.1%	0.0	0	80
+
+
+Sarpsborg 08
+Palsson
+S08
+4.5	0.3%	1.0	4	78
+
+
+Kristiansund BK
+Askar
+KBK
+5.4	0.6%	0.8	4	70
+
+
+Strømsgodset
+Enersen
+SIF
+4.5	0.0%	1.2	5	69
+
+
+Sandefjord
+Mørk
+SAN
+4.5	0.3%	0.5	2	60
+
+
+Lillestrøm
+Svendsen
+LSK
+5.9	0.2%	0.2	1	55
+
+
+Odd
+Larsen
+ODD
+6.4	0.2%	0.8	3	55
+
+
+Viking FK
+Auklend
+VIK
+4.9	0.2%	0.6	4	55
+
+
+Tromsø
+Winther
+TIL
+5.0	0.0%	0.5	2	54
+
+
+FK Haugesund
+Ndour
+FKH
+6.9	2.9%	2.0	8	52
+
+
+Molde
+Breivik
+MOL
+4.4	0.5%	0.4	2	46
+
+
+Stabæk
+Lumanza
+STB
+4.9	0.3%	0.5	2	35
+
+
+Sarpsborg 08
+Michel
+S08
+5.0	0.0%	0.2	1	32
+
+Kristiansund BK
+Kalludra
+KBK
+6.4	1.6%	0.4	2	31
+
+
+Lillestrøm
+Brunes
+LSK
+4.5	0.3%	2.0	8	31
+
+
+Strømsgodset
+Krasniqi
+SIF
+4.4	0.1%	0.5	2	31
+
+
+Bodø/Glimt
+Lindahl
+BG
+7.3	0.2%	0.0	1	28
+
+
+Kristiansund BK
+Mucolli
+KBK
+6.2	0.1%	0.4	2	26
+
+
+Strømsgodset
+Jack
+SIF
+4.5	0.3%	0.5	2	24
+
+
+Molde
+Bolly
+MOL
+7.8	0.4%	0.6	4	21
+
+
+Vålerenga
+S. Opsahl
+VIF
+4.9	0.1%	0.4	2	18
+
+
+Mjøndalen
+Twum
+MJO
+4.5	0.4%	0.2	1	17
+
+
+Lillestrøm
+Helland
+LSK
+8.5	1.2%	0.5	2	15
+
+
+Mjøndalen
+Schriven
+MJO
+5.5	0.1%	0.8	3	13
+
+
+Bodø/Glimt
+Tounekti
+BG
+6.9	3.5%	0.4	3	12
+
+
+Brann
+Jensen Wassberg
+BRA
+4.4	0.4%	0.2	1	12
+
+
+Stabæk
+Nusa
+STB
+4.5	0.0%	0.5	1	12
+
+
+Tromsø
+Ingebrigtsen
+TIL
+6.3	0.4%	0.2	2	11
+
+
+Molde
+Grødem
+MOL
+8.0	0.1%	0.2	1	8
+
+
+FK Haugesund
+Gunnarshaug
+FKH
+4.5	0.2%	0.2	1	7
+
+
+Rosenborg
+Konradsen
+RBK
+7.0	1.0%	0.2	1	7
+
+
+Sarpsborg 08
+Muhammed
+S08
+6.4	0.3%	0.2	1	6
+
+
+Vålerenga
+Jatta
+VIF
+4.8	0.1%	0.2	1	5
+
+
+Sandefjord
+Zé Eduardo
+SAN
+4.5	0.3%	0.5	2	5
+
+
+Odd
+Kachi
+ODD
+5.4	0.1%	0.5	2	2
+
+
+Bodø/Glimt
+Moberg
+BG
+6.5	0.1%	0.0	0	0
+
+
+Bodø/Glimt
+Hauge
+BG
+6.0	0.0%	0.0	0	0
+
+
+Bodø/Glimt
+Swaleh
+BG
+4.8	0.1%	0.0	0	0
+
+
+Bodø/Glimt
+Hussein
+BG
+4.4	0.4%	0.0	0	0
+
+
+Bodø/Glimt
+Tjærandsen-Skau
+BG
+4.5	0.0%	0.0	0	0
+
+
+Brann
+Kvinge
+BRA
+4.8	0.1%	0.0	0	0
+
+
+Brann
+Pedersen
+BRA
+5.0	0.1%	0.0	0	0
+
+
+FK Haugesund
+Berg Sande
+FKH
+4.5	0.2%	0.0	0	0
+
+Kristiansund BK
+Taddese
+KBK
+4.5	0.1%	0.0	0	0
+
+
+Kristiansund BK
+Diagne
+KBK
+4.4	0.2%	0.0	0	0
+
+
+Kristiansund BK
+Solskjær
+KBK
+4.5	0.1%	0.0	0	0
+
+
+Lillestrøm
+Seferi
+LSK
+4.5	0.1%	0.0	0	0
+
+
+Lillestrøm
+Tongnoy
+LSK
+4.5	0.0%	0.0	0	0
+
+
+Molde
+Ellingsen
+MOL
+5.8	1.0%	0.0	0	0
+
+
+Odd
+Skogvoll
+ODD
+4.5	0.1%	0.0	0	0
+
+
+Odd
+Aas
+ODD
+4.4	0.2%	0.0	0	0
+
+
+Rosenborg
+Tettey
+RBK
+5.5	0.0%	0.0	0	0
+
+
+Viking FK
+Furdal
+VIK
+6.0	0.1%	0.0	0	0
+
+
+Viking FK
+Sødal
+VIK
+4.5	0.0%	0.0	0	0
+
+
+Sarpsborg 08
+Konte
+S08
+5.5	0.1%	0.0	0	0
+
+
+Sarpsborg 08
+Vetti
+S08
+5.0	0.0%	0.0	0	0
+
+
+Sarpsborg 08
+Mendy
+S08
+4.4	1.1%	0.0	0	0
+
+
+Sarpsborg 08
+Derviskadic
+S08
+4.4	0.2%	0.0	0	0
+
+
+Stabæk
+Kostadinov
+STB
+5.4	0.1%	0.0	0	0
+
+
+Stabæk
+Lundal
+STB
+5.5	0.1%	0.0	0	0
+
+
+Stabæk
+Isaksen
+STB
+4.9	0.1%	0.0	0	0
+
+
+Strømsgodset
+Tokstad
+SIF
+5.9	0.1%	0.0	0	0
+
+
+Strømsgodset
+Fofana
+SIF
+5.5	0.0%	0.0	0	0
+
+
+Strømsgodset
+Stenseth
+SIF
+4.5	0.0%	0.0	0	0
+
+
+Strømsgodset
+Pop
+SIF
+4.5	0.1%	0.0	0	0
+
+
+Tromsø
+Stabell
+TIL
+4.4	0.2%	0.0	0	0
+
+
+Tromsø
+Norheim
+TIL
+4.5	0.0%	0.0	0	0
+
+
+Tromsø
+Henriksen
+TIL
+4.5	0.0%	0.0	0	0
+
+
+Vålerenga
+Thiago Holm
+VIF
+5.4	0.1%	0.0	0	0
+
+
+Vålerenga
+Riisnæs
+VIF
+4.5	0.0%	0.0	0	0
+
+
+Vålerenga
+Emilsen
+VIF
+4.5	0.0%	0.0	0	0
+
+
+Mjøndalen
+Bamenye
+MJO
+4.9	0.0%	0.0	0	0
+
+
+Mjøndalen
+Bækken
+MJO
+4.9	0.0%	0.0	0	0
+
+Sandefjord
+Kurtovic
+SAN
+5.0	0.0%	0.0	0	0
+
+
+Sandefjord
+Johansen
+SAN
+4.4	0.1%	0.0	0	0
+
+
+Sandefjord
+Andersen
+SAN
+4.5	0.1%	0.0	0	0
+
+
+Sandefjord
+Falchener
+SAN
+4.5	0.1%	0.0	0	0
+
+
+Sandefjord
+Egeli
+SAN
+4.5	0.0%	0.0	0	0

@@ -1,0 +1,90 @@
+Bank:0.0
+	
+Kristiansund BK
+McDermott
+KBK
+KPR	4.3	3	47	TIL (A)
+
+
+Bodø/Glimt
+Bjørkan
+BG
+FOR	3.2	5	46	SAN (A)
+
+
+Molde
+Bjørnbak
+MOL
+FOR	4.8	6	45	SIF (H)
+
+
+Vålerenga
+Tollås Nation
+VIF
+FOR	3.8	6	52	S08 (H)
+
+
+Molde
+Haugen
+MOL
+FOR	6.5	5	49	SIF (H)
+
+
+Bodø/Glimt
+Solbakken
+BG
+MID	4.2	1	51	SAN (A)
+
+
+Kristiansund BK
+Kartum
+KBK
+MID	4.0	0	26	TIL (A)
+
+
+Viking FK
+Fridjónsson
+VIK
+MID	2.7	0	39	STB (H)
+
+
+Bodø/Glimt
+Sørli
+BG
+MID	5.4	3	59	SAN (A)
+
+
+Viking FK
+Berisha
+VIK
+ANG	7.3	2	49	STB (H)
+
+
+Odd
+Bakenga
+ODD
+ANG	9.5	12	58	MJO (A)
+
+
+Mjøndalen
+Thomas
+MJO
+KPR	0.0	0	0	ODD (H)
+
+
+Sandefjord
+Celorrio
+SAN
+ANG	0.0	0	1	BG (H)
+
+
+Viking FK
+Haugen
+VIK
+FOR	0.7	1	6	STB (H)
+
+
+Sarpsborg 08
+Lindseth
+S08
+MID	0.2	0	24	VIF (A)

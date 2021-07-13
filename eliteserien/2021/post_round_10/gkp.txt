@@ -1,0 +1,286 @@
+Bodø/Glimt
+Khaykin
+BG
+5.5	6.8%	3.2	48	1080
+
+
+Rosenborg
+Hansen
+RBK
+6.0	10.7%	3.2	34	990
+
+
+Vålerenga
+Klaesson
+VIF
+5.5	22.1%	2.8	35	990
+
+
+Kristiansund BK
+McDermott
+KBK
+5.5	22.8%	7.5	64	900
+
+
+Viking FK
+Austbø
+VIK
+5.3	4.3%	2.0	19	900
+
+
+Tromsø
+Karlstrøm
+TIL
+4.6	19.4%	4.2	36	900
+
+
+Odd
+Rossbach
+ODD
+5.5	6.4%	3.4	29	810
+
+
+Sarpsborg 08
+Kristiansen
+S08
+5.5	0.8%	4.0	39	810
+
+
+Strømsgodset
+Myhra
+SIF
+4.5	12.7%	2.8	27	810
+
+
+FK Haugesund
+Selvik
+FKH
+5.2	6.5%	7.8	53	720
+
+
+Mjøndalen
+Makani
+MJO
+5.0	7.7%	1.2	29	720
+
+
+Sandefjord
+Storevik
+SAN
+4.9	8.5%	4.8	34	720
+
+
+Stabæk
+Sandberg
+STB
+5.5	2.4%	0.4	26	678
+
+
+Brann
+Opdal
+BRA
+4.9	3.3%	0.0	14	630
+
+
+Lillestrøm
+Christiansen
+LSK
+4.5	1.5%	4.0	25	540
+
+
+Molde
+Linde
+MOL
+6.4	9.4%	0.0	25	540
+
+
+Molde
+Petersen
+MOL
+4.5	0.6%	4.6	23	450
+
+
+Brann
+Holmen Johansen
+BRA
+4.4	1.1%	3.8	15	360
+
+
+Lillestrøm
+Craninx
+LSK
+4.4	4.2%	0.0	3	180
+
+
+Stabæk
+Brauti
+STB
+4.5	0.1%	0.4	2	128
+
+
+Bodø/Glimt
+Smits
+BG
+4.8	1.2%	0.0	0	0
+
+
+Bodø/Glimt
+Andersen
+BG
+3.9	1.5%	0.0	0	0
+
+
+Brann
+Pettersen
+BRA
+4.5	0.1%	0.0	0	0
+
+
+FK Haugesund
+Sandvik
+FKH
+4.9	2.2%	0.0	0	0
+
+
+FK Haugesund
+Stople
+FKH
+4.0	21.7%	0.0	0	0
+
+
+Kristiansund BK
+Mbaye
+KBK
+4.5	0.2%	0.0	0	0
+
+
+Kristiansund BK
+Hadaya
+KBK
+4.4	0.3%	0.0	0	0
+
+
+Lillestrøm
+Ødegaard
+LSK
+4.0	2.7%	0.0	0	0
+
+
+Lillestrøm
+Sveinhaug
+LSK
+4.0	0.1%	0.0	0	0
+
+
+Molde
+Ranmark
+MOL
+4.5	0.1%	0.0	0	0
+
+Molde
+Lervik
+MOL
+4.0	0.0%	0.0	0	0
+
+
+Odd
+Wahlstedt
+ODD
+4.5	0.2%	0.0	0	0
+
+
+Rosenborg
+Lund
+RBK
+5.0	0.4%	0.0	0	0
+
+
+Rosenborg
+Tangvik
+RBK
+4.0	1.6%	0.0	0	0
+
+
+Viking FK
+Østbø
+VIK
+5.0	0.3%	0.0	0	0
+
+
+Viking FK
+Ur
+VIK
+4.0	0.4%	0.0	0	0
+
+
+Sarpsborg 08
+Nilsen
+S08
+4.5	0.2%	0.0	0	0
+
+
+Sarpsborg 08
+Oy
+S08
+4.0	0.0%	0.0	0	0
+
+
+Stabæk
+Ulla
+STB
+4.5	0.1%	0.0	0	0
+
+
+Strømsgodset
+Sætra
+SIF
+4.0	5.7%	0.0	0	0
+
+
+Strømsgodset
+Skretteberg
+SIF
+4.0	0.6%	0.0	0	0
+
+
+Tromsø
+Trige
+TIL
+4.0	3.7%	0.0	0	0
+
+
+Tromsø
+Thomas
+TIL
+4.5	0.0%	0.0	0	0
+
+
+Vålerenga
+Haug
+VIF
+4.9	1.1%	0.0	0	0
+
+
+Mjøndalen
+Thomas
+MJO
+4.0	2.1%	0.0	0	0
+
+
+Mjøndalen
+Lysgård
+MJO
+4.0	1.5%	0.0	0	0
+
+
+Sandefjord
+Due
+SAN
+4.4	0.3%	0.0	0	0
+
+
+Sandefjord
+Granlund
+SAN
+4.0	0.3%	0.0	0	0
+

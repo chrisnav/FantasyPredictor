@@ -1,0 +1,368 @@
+Liverpool
+Alisson
+LIVGKP
+6.0	7.7%	6.2	132
+
+
+Sheffield Utd
+Ramsdale
+SHUGKP
+4.6	1.9%	5.4	114
+
+
+Everton
+Pickford
+EVEGKP
+4.8	5.4%	5.3	112
+
+
+Chelsea
+Mendy
+CHEGKP
+5.2	10.6%	4.8	139
+
+
+Spurs
+Lloris
+TOTGKP
+5.6	6.8%	4.2	147
+
+
+Newcastle
+Dubravka
+NEWGKP
+4.8	0.7%	3.6	41
+
+
+West Brom
+Johnstone
+WBAGKP
+4.6	3.0%	3.5	137
+
+
+Aston Villa
+Martínez
+AVLGKP
+5.4	38.4%	3.1	183
+
+Burnley
+Pope
+BURGKP
+5.5	9.8%	2.8	144
+
+
+Man City
+Ederson
+MCIGKP
+6.1	9.3%	2.6	148
+
+
+Leicester
+Schmeichel
+LEIGKP
+5.4	9.7%	2.3	130
+
+
+Brighton
+Sánchez
+BHAGKP
+4.5	3.4%	2.2	99
+
+
+Fulham
+Areola
+FULGKP
+4.5	4.6%	2.2	124
+
+
+Man Utd
+Henderson
+MUNGKP
+5.2	2.2%	2.2	42
+
+
+Crystal Palace
+Guaita
+CRYGKP
+4.8	3.7%	2.0	122
+
+
+Wolves
+Patrício
+WOLGKP
+5.3	4.7%	2.0	131
+
+
+West Ham
+Fabianski
+WHUGKP
+5.0	3.4%	1.8	124
+
+
+Southampton
+McCarthy
+SOUGKP
+4.4	11.0%	1.7	92
+
+
+Southampton
+Forster
+SOUGKP
+4.0	7.1%	1.7	30
+
+
+Arsenal
+Ryan
+ARSGKP
+4.1	5.7%	1.2	37
+
+
+Man Utd
+de Gea
+MUNGKP
+5.3	3.3%	0.8	91
+
+
+West Ham
+Randolph
+WHUGKP
+4.3	0.2%	0.6	10
+
+
+Wolves
+Ruddy
+WOLGKP
+4.3	0.2%	0.6	4
+
+
+Chelsea
+Arrizabalaga
+CHEGKP
+4.7	0.6%	0.4	26
+
+
+Crystal Palace
+Butland
+CRYGKP
+4.5	0.1%	0.3	2
+
+
+Burnley
+Norris
+BURGKP
+4.0	0.1%	0.2	1
+
+Arsenal
+Rúnarsson
+ARSGKP
+4.4	0.0%	0.0	1
+
+
+Aston Villa
+Heaton
+AVLGKP
+4.5	0.1%	0.0	0
+
+
+Aston Villa
+Steer
+AVLGKP
+3.9	4.4%	0.0	0
+
+
+Brighton
+Walton
+BHAGKP
+4.0	1.1%	0.0	0
+
+
+Brighton
+Steele
+BHAGKP
+3.9	0.8%	0.0	0
+
+
+Brighton
+McGill
+BHAGKP
+3.9	0.3%	0.0	0
+
+
+Burnley
+Peacock-Farrell
+BURGKP
+4.0	1.1%	0.0	3
+
+
+Chelsea
+Caballero
+CHEGKP
+4.6	0.2%	0.0	1
+
+
+Chelsea
+Ziger
+CHEGKP
+4.0	0.6%	0.0	0
+
+
+Crystal Palace
+Hennessey
+CRYGKP
+4.3	0.3%	0.0	0
+
+
+Crystal Palace
+Henderson
+CRYGKP
+4.0	0.4%	0.0	0
+
+
+Everton
+Virgínia
+EVEGKP
+4.3	0.1%	0.0	2
+
+
+Everton
+Olsen
+EVEGKP
+4.5	0.1%	0.0	25
+
+
+Everton
+Tyrer
+EVEGKP
+4.0	0.0%	0.0	0
+
+
+Fulham
+Fabri
+FULGKP
+3.9	2.1%	0.0	0
+
+
+Fulham
+Rodák
+FULGKP
+4.3	0.2%	0.0	1
+
+
+Leicester
+Ward
+LEIGKP
+4.3	0.2%	0.0	0
+
+
+Leeds
+Caprile
+LEEGKP
+4.0	0.2%	0.0	0
+
+
+Liverpool
+Adrián
+LIVGKP
+4.2	0.3%	0.0	11
+
+
+Liverpool
+Kelleher
+LIVGKP
+4.5	0.1%	0.0	10
+
+
+Liverpool
+Hughes
+LIVGKP
+4.0	0.0%	0.0	0
+
+
+Liverpool
+Ojrzynski
+LIVGKP
+4.0	0.0%	0.0	0
+
+
+Man City
+Steffen
+MCIGKP
+4.4	0.1%	0.0	2
+
+
+Man City
+Trafford
+MCIGKP
+4.0	0.1%	0.0	0
+
+
+Man Utd
+Grant
+MUNGKP
+4.0	0.1%	0.0	0
+
+
+Newcastle
+Darlow
+NEWGKP
+4.9	1.1%	0.0	80
+
+
+Newcastle
+Gillespie
+NEWGKP
+4.3	0.1%	0.0	0
+
+
+Newcastle
+Langley
+NEWGKP
+3.9	0.1%	0.0	0
+
+
+Sheffield Utd
+Foderingham
+SHUGKP
+4.3	0.1%	0.0	0
+
+
+Southampton
+Lewis
+SOUGKP
+4.0	0.0%	0.0	0
+
+
+Spurs
+Hart
+TOTGKP
+4.2	0.6%	0.0	0
+
+
+West Brom
+Button
+WBAGKP
+3.9	3.7%	0.0	2
+
+
+West Brom
+Lonergan
+WBAGKP
+4.0	0.0%	0.0	0
+
+
+West Ham
+Martin
+WHUGKP
+3.9	5.3%	0.0	0
+
+
+West Ham
+Trott
+WHUGKP
+4.0	0.0%	0.0	0
+
+
+Wolves
+Söndergaard
+WOLGKP
+4.0	0.2%	0.0	0

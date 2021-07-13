@@ -4,17 +4,14 @@ import sys
 players = []
 
 for pos in ["gkp","def","mid","fwd"]:
-    
-    file = f"C:\\Prog\\Fantasy\\eliteserien\\2021\\post_round_1\\{pos}.txt"
+
+    file = f"premier_league\\2021\\post_round_37\\{pos}.txt"
     new_players = pr.read_position(file,pos)
     
     players += new_players
     
-#teams = [r"Bodø/Glimt","Vålerenga","Rosenborg","Kristiansund BK","Viking FK","Brann","Molde","Tromsø","Sandefjord","Odd"]
-#players = [p for p in players if p.team in teams]
 
-
-existing_player_dict,bank = pr.read_existing_team("eliteserien\\2021\\post_round_1\\existing_team.txt")
+existing_player_dict,bank = pr.read_existing_team("premier_league\\2021\\post_round_37\\existing_team.txt")
 existing_players = []
 for name,team in existing_player_dict.items():
     
@@ -31,7 +28,8 @@ print("")
 
 opt = pr.FantasyOptimizer(r"C:\My Stuff\CPLEX 20\cplex.exe")
 
-opt.build_basic_model(players,existing_players=existing_players,budget = team_worth)
+#opt.build_basic_model(players,existing_players=existing_players,budget = team_worth)
+opt.build_basic_model(players,budget = team_worth)
 
 opt.solve_model()
 opt.display_results()

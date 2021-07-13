@@ -1,0 +1,89 @@
+Bank: 0.5
+
+Vålerenga
+Klaesson
+VIF
+KPR	3.6	2	18	SAN (H)
+
+
+Bodø/Glimt
+Bjørkan
+BG
+FOR	5.6	6	28	ODD (A)
+
+
+Vålerenga
+Borchgrevink
+VIF
+FOR	3.8	7	19	SAN (H)
+
+
+Viking FK
+Heggheim
+VIK
+FOR	2.0	2	10	FKH (A)
+
+
+Viking FK
+Fridjónsson
+VIK
+MID	5.8	2	29	FKH (A)
+
+
+Bodø/Glimt
+Saltnes
+BG
+MID	3.8	3	19	ODD (A)
+
+
+Rosenborg
+Zachariassen
+RBK
+MID	8.5	5	51	STB (H)
+
+
+Molde
+Aursnes
+MOL
+MID	5.8	2	29	MJO (A)
+
+
+Odd
+Bakenga
+ODD
+ANG	6.0	1	18	BG (H)
+
+
+Rosenborg
+Molins
+RBK
+ANG	3.3	5	20	STB (H)
+
+
+Tromsø
+Ebiye
+TIL
+ANG	4.6	2	23	S08 (H)
+
+FK Haugesund
+Stople
+FKH
+KPR	0.0	0	0	VIK (H)
+
+
+Stabæk
+Solheim
+STB
+FOR	4.0	5	12	RBK (A)
+
+
+Viking FK
+Bell
+VIK
+MID	2.6	2	13	FKH (A)
+
+
+Kristiansund BK
+Sørmo
+KBK
+FOR	0.4	0	2	LSK (H)
