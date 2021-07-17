@@ -47,18 +47,17 @@ def calculate_expected_score(players,prob_lose,games_played):
 print("")
 
 
-n = 11
+n = 12
 loc= f"eliteserien\\2021\\post_round_{n}\\"
 
 games_played = {t:n+1 for t in TEAMS}
-games_played['Bodø/Glimt']      += 1
 games_played['Kristiansund BK'] -= 1
 games_played['Viking FK']       -= 1
 games_played['Tromsø']          -= 1
 games_played['Strømsgodset']    -= 2
 games_played['Odd']             -= 2
 games_played['Sarpsborg 08']    -= 2
-games_played['Stabæk']          -= 2
+games_played['Stabæk']          -= 3
 games_played['Lillestrøm']      -= 3
 games_played['Mjøndalen']       -= 3
 games_played['FK Haugesund']    -= 3
@@ -78,10 +77,10 @@ for pos in ["gkp","def","mid","fwd"]:
 calculate_expected_score(players,prob_lose,games_played)
 
 not_playing = {}
-not_playing["Odd"] = ["Bakenga"]
+not_playing["Odd"] = []
 not_playing["Bodø/Glimt"] = ["Sørli","Solbakken","Bjørkan"]
 not_playing["Rosenborg"] = ["Zachariassen"]
-not_playing["FK Haugesund"] = ["Sandberg"]
+not_playing["FK Haugesund"] = []
 
 for team, out in not_playing.items():
     
@@ -112,14 +111,27 @@ for p in existing_players:
     team_worth += p.cost
 print("")
 
-#team_worth = 10000
-#team_worth = 100
+rik_onkel = False
+spiss_rush = False
 
-opt = pr.FantasyOptimizer(r"C:\My Stuff\CPLEX 20\cplex.exe")
+n_free_transf = 1
+
+if rik_onkel:    
+    team_worth = 10000
+    n_free_transf = 15
+    
+if spiss_rush:
+    for p in players:
+        if p.position=="fwd":
+            p.score *= 2
+    
+    
+opt = pr.FantasyOptimizer(r"C:\CPLEX 20_10\cplex.exe")
 
 opt.build_best_formation_model(players,budget = team_worth)
-opt.add_existing_team(existing_players,n_free_transf=1)
-#opt.add_min_team_players("Rosenborg",1)
+opt.add_existing_team(existing_players,n_free_transf=n_free_transf)
+#opt.add_min_team_players("Rosenborg",1)  
+
 
 opt.solve_model()
 opt.display_results()

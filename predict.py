@@ -203,7 +203,6 @@ class FantasyOptimizer():
         def min_from_team(m):
             return sum(m.in_squad[i] for i in m.I if self.players[i].team == team) >= n
         model.MinFromTeam = Constraint(rule=min_from_team)
-        
       
     def solve_model(self):
         
