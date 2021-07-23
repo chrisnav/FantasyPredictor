@@ -37,6 +37,7 @@ def calculate_expected_score(players,prob_lose,games_played):
         p.score = score*(1+factor)
 
         N = len(p_lose)             #Number of games this round
+
         if N == 2:
             p.score *= 1.5
         elif N == 3:
@@ -47,28 +48,28 @@ def calculate_expected_score(players,prob_lose,games_played):
 print("")
 
 
-n = 12
+n = 13
 loc= f"eliteserien\\2021\\post_round_{n}\\"
 
 games_played = {t:n+1 for t in TEAMS}
 games_played['Kristiansund BK'] -= 1
+games_played['Strømsgodset']    -= 1
+games_played['Odd']             -= 1
 games_played['Viking FK']       -= 1
+games_played['Sarpsborg 08']    -= 1
 games_played['Tromsø']          -= 1
-games_played['Strømsgodset']    -= 2
-games_played['Odd']             -= 2
-games_played['Sarpsborg 08']    -= 2
-games_played['Stabæk']          -= 3
-games_played['Lillestrøm']      -= 3
-games_played['Mjøndalen']       -= 3
-games_played['FK Haugesund']    -= 3
-games_played['Sandefjord']      -= 3
+games_played['Lillestrøm']      -= 2
+games_played['FK Haugesund']    -= 2
+games_played['Sandefjord']      -= 2
+games_played['Mjøndalen']       -= 2
+games_played['Stabæk']          -= 2
+
 
 prob_lose = ri.get_lose_prob(loc+"match_probs.txt")
 
 players = []
 
 for pos in ["gkp","def","mid","fwd"]:
-    
     file = loc+f"{pos}.txt"
     new_players = ri.read_position(file,pos)
     
@@ -77,10 +78,11 @@ for pos in ["gkp","def","mid","fwd"]:
 calculate_expected_score(players,prob_lose,games_played)
 
 not_playing = {}
-not_playing["Odd"] = []
+not_playing["Odd"] = ["Bakenga"]
 not_playing["Bodø/Glimt"] = ["Sørli","Solbakken","Bjørkan"]
 not_playing["Rosenborg"] = ["Zachariassen"]
-not_playing["FK Haugesund"] = []
+not_playing["FK Haugesund"] = ["Desler"]
+not_playing["Vålerenga"] = ["Borchgrevink","Dønnum"]
 
 for team, out in not_playing.items():
     
@@ -126,7 +128,7 @@ if spiss_rush:
             p.score *= 2
     
     
-opt = pr.FantasyOptimizer(r"C:\CPLEX 20_10\cplex.exe")
+opt = pr.FantasyOptimizer(r"C:\My Stuff\CPLEX 20\cplex.exe")
 
 opt.build_best_formation_model(players,budget = team_worth)
 opt.add_existing_team(existing_players,n_free_transf=n_free_transf)
