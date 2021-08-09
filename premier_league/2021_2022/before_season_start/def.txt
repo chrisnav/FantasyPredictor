@@ -1,0 +1,1011 @@
+Aston Villa
+Targett
+AVLDEF
+5.0	9.9%	0.0	138	3404
+View player information
+
+Leeds
+Ayling
+LEEDEF
+4.5	12.3%	0.0	100	3399
+75% chance of playingView player information
+
+Liverpool
+Robertson
+LIVDEF
+7.0	8.7%	0.0	161	3384
+View player information
+
+Wolves
+Coady
+WOLDEF
+4.5	8.5%	0.0	106	3303
+View player information
+
+Burnley
+Tarkowski
+BURDEF
+5.0	1.4%	0.0	109	3240
+View player information
+
+Aston Villa
+Konsa
+AVLDEF
+5.0	1.2%	0.0	119	3195
+View player information
+
+Aston Villa
+Mings
+AVLDEF
+5.0	8.3%	0.0	128	3194
+View player information
+
+Arsenal
+White
+ARSDEF
+4.5	24.7%	0.0	104	3192
+View player information
+
+West Ham
+Cresswell
+WHUDEF
+5.5	19.6%	0.0	153	3170
+View player information
+
+Crystal Palace
+Kouyaté
+CRYDEF
+4.5	0.5%	0.0	82	3121
+View player information
+
+Southampton
+Bednarek
+SOUDEF
+4.5	1.5%	0.0	94	3100
+View player information
+
+Burnley
+Lowton
+BURDEF
+4.5	3.2%	0.0	103	3060
+View player information
+
+Man Utd
+Wan-Bissaka
+MUNDEF
+5.5	11.1%	0.0	144	3060
+View player information
+
+West Ham
+Coufal
+WHUDEF
+5.0	15.1%	0.0	128	3054
+View player information
+
+Man Utd
+Maguire
+MUNDEF
+5.5	12.2%	0.0	124	3047
+View player information
+
+Liverpool
+Alexander-Arnold
+LIVDEF
+7.5	30.6%	0.0	160	3029
+View player information
+
+Everton
+Keane
+EVEDEF
+5.0	3.0%	0.0	127	2989
+View player information
+
+Wolves
+Semedo
+WOLDEF
+5.0	1.8%	0.0	109	2983
+View player information
+
+Brighton
+Dunk
+BHADEF
+5.0	6.9%	0.0	130	2932
+View player information
+
+Man City
+Dias
+MCIDEF
+6.0	27.6%	0.0	142	2843
+View player information
+
+Crystal Palace
+Andersen
+CRYDEF
+4.5	0.5%	0.0	93	2729
+View player information
+
+Burnley
+Mee
+BURDEF
+5.0	0.9%	0.0	102	2693
+View player information
+
+Everton
+Godfrey
+EVEDEF
+5.0	1.2%	0.0	100	2683
+View player information
+
+Everton
+Digne
+EVEDEF
+5.5	21.4%	0.0	120	2681
+View player information
+
+Man Utd
+Shaw
+MUNDEF
+5.5	52.7%	0.0	124	2653
+View player information
+
+Southampton
+Walker-Peters
+SOUDEF
+5.0	1.0%	0.0	93	2646
+View player information
+
+Leicester
+Bertrand
+LEIDEF
+5.0	1.4%	0.0	78	2598
+View player information
+
+Brighton
+Webster
+BHADEF
+4.5	0.6%	0.0	85	2594
+View player information
+
+Man Utd
+Lindelöf
+MUNDEF
+5.0	0.6%	0.0	102	2585
+View player information
+
+Southampton
+Vestergaard
+SOUDEF
+5.0	1.1%	0.0	86	2574
+
+View player information
+
+Arsenal
+Holding
+ARSDEF
+4.5	2.9%	0.0	105	2557
+View player information
+
+Spurs
+Dier
+TOTDEF
+4.5	1.4%	0.0	77	2520
+View player information
+
+West Ham
+Ogbonna
+WHUDEF
+5.0	0.5%	0.0	100	2492
+0% chance of playingView player information
+
+Leicester
+Evans
+LEIDEF
+5.5	0.9%	0.0	109	2473
+View player information
+
+Burnley
+Taylor
+BURDEF
+4.5	0.9%	0.0	83	2425
+View player information
+
+Wolves
+Saïss
+WOLDEF
+5.0	0.7%	0.0	99	2407
+View player information
+
+Aston Villa
+Cash
+AVLDEF
+5.0	2.1%	0.0	89	2373
+View player information
+
+Chelsea
+James
+CHEDEF
+5.5	8.6%	0.0	112	2367
+View player information
+
+Leicester
+Castagne
+LEIDEF
+5.5	3.3%	0.0	94	2345
+View player information
+
+Arsenal
+Tierney
+ARSDEF
+5.0	8.4%	0.0	96	2299
+View player information
+
+Man City
+Cancelo
+MCIDEF
+6.0	7.8%	0.0	138	2298
+View player information
+
+Chelsea
+Chilwell
+CHEDEF
+6.0	14.0%	0.0	139	2286
+View player information
+
+Everton
+Holgate
+EVEDEF
+4.5	1.0%	0.0	80	2286
+View player information
+
+Brighton
+Veltman
+BHADEF
+4.5	3.8%	0.0	96	2280
+0% chance of playingView player information
+
+Leicester
+Fofana
+LEIDEF
+4.5	4.7%	0.0	71	2260
+View player information
+
+Crystal Palace
+Ward
+CRYDEF
+4.5	0.2%	0.0	66	2255
+View player information
+
+Spurs
+Reguilón
+TOTDEF
+5.0	2.8%	0.0	89	2244
+View player information
+
+Chelsea
+Azpilicueta
+CHEDEF
+6.0	3.4%	0.0	113	2187
+View player information
+
+Leeds
+Cooper
+LEEDEF
+4.5	0.4%	0.0	59	2186
+View player information
+
+Arsenal
+Bellerín
+ARSDEF
+5.0	0.9%	0.0	94	2089
+View player information
+
+Chelsea
+Ampadu
+CHEDEF
+4.5	0.1%	0.0	44	2087
+View player information
+
+Newcastle
+Fernández
+NEWDEF
+4.5	0.2%	0.0	53	2080
+View player information
+
+Leeds
+Struijk
+LEEDEF
+4.5	0.6%	0.0	71	2072
+0% chance of playingView player information
+
+Leicester
+Justin
+LEIDEF
+5.0	0.1%	0.0	101	2070
+25% chance of playingView player information
+
+Brighton
+Burn
+BHADEF
+4.5	0.2%	0.0	64	2057
+View player information
+
+Chelsea
+Zouma
+CHEDEF
+5.5	1.7%	0.0	108	2027
+0% chance of playingView player information
+
+Arsenal
+Gabriel
+ARSDEF
+5.0	0.3%	0.0	78	1996
+View player information
+
+Man City
+Walker
+MCIDEF
+5.5	5.4%	0.0	91	1944
+View player information
+
+Everton
+Mina
+EVEDEF
+5.0	0.6%	0.0	79	1936
+View player information
+
+Chelsea
+Thiago Silva
+CHEDEF
+5.5	3.5%	0.0	92	1935
+
+View player information
+
+Man City
+Stones
+MCIDEF
+5.5	11.6%	0.0	128	1933
+View player information
+
+West Ham
+Dawson
+WHUDEF
+5.0	0.3%	0.0	75	1925
+View player information
+
+Newcastle
+Clark
+NEWDEF
+4.5	0.2%	0.0	46	1890
+25% chance of playingView player information
+
+Wolves
+Boly
+WOLDEF
+5.0	0.4%	0.0	68	1879
+View player information
+
+Newcastle
+Lewis
+NEWDEF
+4.5	0.2%	0.0	44	1833
+View player information
+
+Leicester
+Söyüncü
+LEIDEF
+5.0	2.5%	0.0	59	1816
+View player information
+
+Chelsea
+Rüdiger
+CHEDEF
+5.5	5.9%	0.0	93	1710
+View player information
+
+Crystal Palace
+Mitchell
+CRYDEF
+4.5	1.1%	0.0	58	1710
+View player information
+
+Newcastle
+Lascelles
+NEWDEF
+4.5	0.5%	0.0	44	1625
+View player information
+
+Everton
+Coleman
+EVEDEF
+5.0	0.6%	0.0	81	1607
+View player information
+
+Spurs
+Aurier
+TOTDEF
+5.0	0.6%	0.0	80	1605
+View player information
+
+Southampton
+Stephens
+SOUDEF
+4.5	0.1%	0.0	41	1537
+View player information
+
+Spurs
+Sánchez
+TOTDEF
+4.5	0.6%	0.0	43	1486
+View player information
+
+Man City
+Zinchenko
+MCIDEF
+5.5	1.9%	0.0	69	1473
+View player information
+
+Liverpool
+Phillips
+LIVDEF
+4.5	0.5%	0.0	68	1455
+View player information
+
+Wolves
+Ait Nouri
+WOLDEF
+4.5	1.2%	0.0	54	1400
+View player information
+
+West Ham
+Diop
+WHUDEF
+4.5	0.5%	0.0	42	1379
+View player information
+
+Chelsea
+Christensen
+CHEDEF
+5.0	0.9%	0.0	61	1371
+View player information
+
+Newcastle
+Ritchie
+NEWDEF
+5.0	0.3%	0.0	52	1347
+View player information
+
+Man City
+Laporte
+MCIDEF
+5.5	1.8%	0.0	58	1343
+View player information
+
+Spurs
+Davies
+TOTDEF
+4.5	0.3%	0.0	52	1340
+View player information
+
+Wolves
+Kilman
+WOLDEF
+4.5	0.2%	0.0	58	1307
+View player information
+
+Newcastle
+Krafth
+NEWDEF
+4.5	0.1%	0.0	45	1286
+View player information
+
+Burnley
+Pieters
+BURDEF
+4.5	0.3%	0.0	50	1260
+View player information
+
+Newcastle
+Schär
+NEWDEF
+4.5	0.3%	0.0	30	1255
+50% chance of playingView player information
+
+Newcastle
+Dummett
+NEWDEF
+4.5	0.1%	0.0	40	1254
+View player information
+
+Spurs
+Doherty
+TOTDEF
+5.0	1.0%	0.0	47	1238
+75% chance of playingView player information
+
+Leeds
+Llorente
+LEEDEF
+4.5	0.4%	0.0	50	1203
+View player information
+
+Crystal Palace
+Clyne
+CRYDEF
+4.5	0.0%	0.0	28	1145
+View player information
+
+Leeds
+Koch
+LEEDEF
+4.5	0.4%	0.0	38	1130
+
+View player information
+
+West Ham
+Masuaku
+WHUDEF
+4.5	0.3%	0.0	42	1006
+View player information
+
+Leicester
+Thomas
+LEIDEF
+4.5	0.3%	0.0	26	968
+View player information
+
+Chelsea
+Alonso
+CHEDEF
+5.5	1.3%	0.0	57	958
+View player information
+
+Leicester
+Pereira
+LEIDEF
+5.5	2.3%	0.0	27	954
+View player information
+
+Man City
+Mendy
+MCIDEF
+5.5	1.1%	0.0	63	951
+View player information
+
+Man Utd
+Bailly
+MUNDEF
+5.0	0.2%	0.0	31	915
+View player information
+
+Arsenal
+Marí
+ARSDEF
+4.5	0.2%	0.0	34	900
+25% chance of playingView player information
+
+Brighton
+Lamptey
+BHADEF
+4.5	2.7%	0.0	35	887
+View player information
+
+Southampton
+Salisu
+SOUDEF
+4.5	0.1%	0.0	14	841
+View player information
+
+Newcastle
+Manquillo
+NEWDEF
+4.0	13.2%	0.0	28	822
+View player information
+
+Man City
+Aké
+MCIDEF
+5.0	0.3%	0.0	29	797
+View player information
+
+Arsenal
+Chambers
+ARSDEF
+4.5	0.6%	0.0	36	751
+View player information
+
+Arsenal
+Cédric
+ARSDEF
+4.5	0.3%	0.0	28	744
+View player information
+
+Spurs
+Rodon
+TOTDEF
+4.5	0.2%	0.0	27	732
+View player information
+
+Leicester
+Amartey
+LEIDEF
+4.0	9.0%	0.0	19	718
+View player information
+
+Liverpool
+Matip
+LIVDEF
+5.0	0.5%	0.0	42	690
+0% chance of playingView player information
+
+Man Utd
+Telles
+MUNDEF
+5.0	0.1%	0.0	25	689
+View player information
+
+Liverpool
+R.Williams
+LIVDEF
+4.5	0.1%	0.0	28	659
+25% chance of playingView player information
+
+Burnley
+Long
+BURDEF
+4.0	0.5%	0.0	14	636
+View player information
+
+Aston Villa
+Hause
+AVLDEF
+4.5	0.2%	0.0	32	630
+View player information
+
+Wolves
+Marçal
+WOLDEF
+4.5	0.1%	0.0	19	618
+View player information
+
+Liverpool
+Gomez
+LIVDEF
+5.0	0.8%	0.0	10	589
+View player information
+
+Wolves
+Hoever
+WOLDEF
+4.0	2.2%	0.0	13	573
+View player information
+
+West Ham
+Fredericks
+WHUDEF
+4.5	0.2%	0.0	28	564
+View player information
+
+Crystal Palace
+Tomkins
+CRYDEF
+4.5	0.2%	0.0	18	551
+View player information
+
+West Ham
+Johnson
+WHUDEF
+4.0	3.0%	0.0	25	516
+0% chance of playingView player information
+
+Wolves
+Jonny
+WOLDEF
+4.5	0.0%	0.0	16	496
+View player information
+
+Spurs
+Tanganga
+TOTDEF
+4.5	0.2%	0.0	14	487
+View player information
+
+Aston Villa
+Tuanzebe
+AVLDEF
+4.5	0.4%	0.0	7	402
+View player information
+
+Liverpool
+van Dijk
+LIVDEF
+6.5	10.6%	0.0	15	370
+
+View player information
+
+Burnley
+Bardsley
+BURDEF
+4.0	1.0%	0.0	2	273
+View player information
+
+Liverpool
+N.Williams
+LIVDEF
+4.0	1.3%	0.0	11	247
+View player information
+
+Man Utd
+Williams
+MUNDEF
+4.0	3.1%	0.0	5	187
+View player information
+
+Liverpool
+Tsimikas
+LIVDEF
+4.0	3.9%	0.0	2	6
+View player information
+
+Crystal Palace
+Kelly
+CRYDEF
+4.0	1.5%	0.0	1	1
+View player information
+
+Arsenal
+Kolasinac
+ARSDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Arsenal
+Tavares
+ARSDEF
+4.5	0.5%	0.0	0	0
+75% chance of playingView player information
+
+Aston Villa
+Guilbert
+AVLDEF
+4.5	0.1%	0.0	0	0
+View player information
+
+Aston Villa
+Young
+AVLDEF
+5.0	1.0%	0.0	0	0
+View player information
+
+Brentford
+Jansson
+BREDEF
+4.5	0.5%	0.0	0	0
+View player information
+
+Brentford
+Henry
+BREDEF
+4.5	0.7%	0.0	0	0
+View player information
+
+Brentford
+Goode
+BREDEF
+4.0	1.8%	0.0	0	0
+View player information
+
+Brentford
+Roerslev
+BREDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Brentford
+Sørensen
+BREDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Brentford
+Pinnock
+BREDEF
+4.5	0.3%	0.0	0	0
+View player information
+
+Brentford
+Ajer
+BREDEF
+4.5	0.6%	0.0	0	0
+View player information
+
+Brighton
+Duffy
+BHADEF
+4.0	4.0%	0.0	0	0
+View player information
+
+Burnley
+Collins
+BURDEF
+4.5	0.1%	0.0	0	0
+View player information
+
+Crystal Palace
+Jach
+CRYDEF
+4.5	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Crystal Palace
+Ferguson
+CRYDEF
+4.5	0.0%	0.0	0	0
+View player information
+
+Crystal Palace
+Guéhi
+CRYDEF
+4.5	0.4%	0.0	0	0
+75% chance of playingView player information
+
+Leeds
+Firpo
+LEEDEF
+5.0	1.2%	0.0	0	0
+View player information
+
+Liverpool
+Konaté
+LIVDEF
+5.5	4.2%	0.0	0	0
+View player information
+
+Liverpool
+Davies
+LIVDEF
+4.0	0.6%	0.0	0	0
+View player information
+
+Norwich
+Hanley
+NORDEF
+4.5	0.3%	0.0	0	0
+View player information
+
+Norwich
+Byram
+NORDEF
+4.5	0.1%	0.0	0	0
+View player information
+
+Norwich
+Zimmermann
+NORDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Norwich
+Aarons
+NORDEF
+4.5	3.1%	0.0	0	0
+View player information
+
+Norwich
+Sørensen
+NORDEF
+4.5	0.1%	0.0	0	0
+View player information
+
+Norwich
+Omobamidele
+NORDEF
+4.0	2.4%	0.0	0	0
+
+View player information
+
+Norwich
+Gibson
+NORDEF
+4.5	0.1%	0.0	0	0
+View player information
+
+Norwich
+Giannoulis
+NORDEF
+4.5	0.1%	0.0	0	0
+View player information
+
+Southampton
+Perraud
+SOUDEF
+5.0	0.2%	0.0	0	0
+View player information
+
+Southampton
+Livramento
+SOUDEF
+4.0	1.7%	0.0	0	0
+View player information
+
+Spurs
+Sessegnon
+TOTDEF
+4.5	0.2%	0.0	0	0
+75% chance of playingView player information
+
+Spurs
+Romero
+TOTDEF
+5.0	0.2%	0.0	0	0
+View player information
+
+Watford
+Rose
+WATDEF
+4.5	1.0%	0.0	0	0
+View player information
+
+Watford
+Cathcart
+WATDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Watford
+Femenía
+WATDEF
+4.5	0.4%	0.0	0	0
+View player information
+
+Watford
+Kabasele
+WATDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Watford
+Troost-Ekong
+WATDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Watford
+Masina
+WATDEF
+4.5	0.2%	0.0	0	0
+View player information
+
+Watford
+Sierralta
+WATDEF
+4.5	0.4%	0.0	0	0
+View player information
+
+Watford
+Navarro
+WATDEF
+4.0	1.1%	0.0	0	0
+View player information
+
+Watford
+Ngakia
+WATDEF
+4.5	0.1%	0.0	0	0
+View player information
+
+Watford
+Pollock
+WATDEF
+4.0	1.0%	0.0	0	0
+View player information
+
+West Ham
+Reid
+WHUDEF
+4.0	2.0%	0.0	0	0
+25% chance of playingView player information
+
+Wolves
+Mosquera
+WOLDEF
+4.5	0.1%	0.0	0	0

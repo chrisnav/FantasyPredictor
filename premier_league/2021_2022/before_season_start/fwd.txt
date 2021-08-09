@@ -1,0 +1,349 @@
+75% chance of playingView player information
+
+Aston Villa
+Watkins
+AVLFWD
+7.5	19.8%	0.0	168	3328
+View player information
+
+Spurs
+Kane
+TOTFWD
+12.5	22.6%	0.0	242	3083
+View player information
+
+Leeds
+Bamford
+LEEFWD
+8.0	19.4%	0.0	194	3052
+75% chance of playingView player information
+
+Everton
+Calvert-Lewin
+EVEFWD
+8.0	19.6%	0.0	165	2871
+View player information
+
+Everton
+Richarlison
+EVEFWD
+7.5	7.3%	0.0	123	2862
+View player information
+
+Leicester
+Vardy
+LEIFWD
+10.5	11.4%	0.0	187	2838
+View player information
+
+Liverpool
+Firmino
+LIVFWD
+9.0	5.2%	0.0	141	2837
+View player information
+
+Burnley
+Wood
+BURFWD
+7.0	3.1%	0.0	138	2741
+View player information
+
+Southampton
+Adams
+SOUFWD
+7.0	1.9%	0.0	137	2662
+View player information
+
+Chelsea
+Werner
+CHEFWD
+9.0	6.1%	0.0	128	2598
+View player information
+
+Brighton
+Maupay
+BHAFWD
+6.5	2.4%	0.0	105	2508
+View player information
+
+Arsenal
+Aubameyang
+ARSFWD
+10.0	4.0%	0.0	131	2330
+View player information
+
+Aston Villa
+Ings
+AVLFWD
+8.0	20.9%	0.0	131	2172
+View player information
+
+Crystal Palace
+Ayew
+CRYFWD
+6.0	0.7%	0.0	70	2086
+View player information
+
+Newcastle
+Wilson
+NEWFWD
+7.5	6.3%	0.0	134	2081
+View player information
+
+Man City
+Jesus
+MCIFWD
+8.5	3.3%	0.0	115	2056
+View player information
+
+Newcastle
+Joelinton
+NEWFWD
+6.0	0.7%	0.0	74	1979
+View player information
+
+West Ham
+Antonio
+WHUFWD
+7.5	18.3%	0.0	118	1972
+View player information
+
+Arsenal
+Lacazette
+ARSFWD
+8.5	4.5%	0.0	129	1916
+View player information
+
+Crystal Palace
+Benteke
+CRYFWD
+6.5	1.4%	0.0	106	1808
+View player information
+
+Newcastle
+Saint-Maximin
+NEWFWD
+6.5	4.7%	0.0	85	1554
+0% chance of playingView player information
+
+Brighton
+Welbeck
+BHAFWD
+6.0	0.6%	0.0	89	1541
+View player information
+
+Man Utd
+Martial
+MUNFWD
+8.0	1.1%	0.0	75	1477
+View player information
+
+Leicester
+Iheanacho
+LEIFWD
+7.5	14.6%	0.0	110	1452
+View player information
+
+Man Utd
+Cavani
+MUNFWD
+8.5	14.6%	0.0	99	1364
+View player information
+
+Burnley
+Vydra
+BURFWD
+5.5	1.0%	0.0	62	1359
+View player information
+
+Wolves
+Fabio Silva
+WOLFWD
+6.0	1.0%	0.0	72	1352
+View player information
+
+Burnley
+Barnes
+BURFWD
+5.5	1.9%	0.0	52	1324
+View player information
+
+Leeds
+Rodrigo
+LEEFWD
+6.5	1.8%	0.0	89	1279
+View player information
+
+Burnley
+Rodriguez
+BURFWD
+5.5	0.8%	0.0	54	1248
+
+View player information
+
+Chelsea
+Abraham
+CHEFWD
+6.5	1.0%	0.0	69	1031
+View player information
+
+Wolves
+Jiménez
+WOLFWD
+7.5	3.8%	0.0	43	824
+View player information
+
+Brighton
+Connolly
+BHAFWD
+5.5	0.2%	0.0	38	783
+View player information
+
+Chelsea
+Batshuayi
+CHEFWD
+5.5	0.2%	0.0	41	717
+View player information
+
+Newcastle
+Gayle
+NEWFWD
+5.5	0.2%	0.0	31	501
+0% chance of playingView player information
+
+Arsenal
+Nketiah
+ARSFWD
+5.5	0.4%	0.0	36	411
+25% chance of playingView player information
+
+Aston Villa
+Davis
+AVLFWD
+4.5	6.6%	0.0	23	265
+View player information
+
+Crystal Palace
+Mateta
+CRYFWD
+5.5	0.1%	0.0	15	215
+View player information
+
+Liverpool
+Origi
+LIVFWD
+5.0	1.3%	0.0	10	180
+View player information
+
+Watford
+King
+WATFWD
+5.5	1.2%	0.0	11	138
+View player information
+
+Southampton
+Obafemi
+SOUFWD
+4.5	9.5%	0.0	4	57
+View player information
+
+Aston Villa
+Wesley
+AVLFWD
+5.5	0.2%	0.0	3	15
+View player information
+
+Brentford
+Toney
+BREFWD
+6.5	30.1%	0.0	0	0
+View player information
+
+Brentford
+Forss
+BREFWD
+5.5	0.2%	0.0	0	0
+View player information
+
+Brentford
+Dervişoğlu
+BREFWD
+5.5	0.1%	0.0	0	0
+View player information
+
+Leicester
+Daka
+LEIFWD
+7.5	2.2%	0.0	0	0
+View player information
+
+Norwich
+Pukki
+NORFWD
+6.0	8.5%	0.0	0	0
+View player information
+
+Norwich
+Hugill
+NORFWD
+5.5	0.1%	0.0	0	0
+View player information
+
+Norwich
+Idah
+NORFWD
+5.0	0.7%	0.0	0	0
+View player information
+
+Watford
+Deeney
+WATFWD
+5.5	3.5%	0.0	0	0
+View player information
+
+Watford
+Gray
+WATFWD
+5.5	0.3%	0.0	0	0
+View player information
+
+Watford
+Perica
+WATFWD
+4.5	4.3%	0.0	0	0
+View player information
+
+Watford
+Success
+WATFWD
+5.0	0.8%	0.0	0	0
+View player information
+
+Watford
+Fletcher
+WATFWD
+5.0	0.4%	0.0	0	0
+View player information
+
+Watford
+João Pedro
+WATFWD
+5.5	1.0%	0.0	0	0
+View player information
+
+Watford
+Dennis
+WATFWD
+5.0	0.5%	0.0	0	0
+View player information
+
+Watford
+Mebude
+WATFWD
+4.5	1.3%	0.0	0	0
+View player information
+
+Watford
+Cucho
+WATFWD
+5.0	0.4%	0.0	0	0

@@ -69,7 +69,7 @@ def read_position(position_file,pos):
     
     for l in lines:
         
-        if len(l) < 2:
+        if len(l) < 2 or "View player information" in l:
             continue
         
         if len(team) == 0:
