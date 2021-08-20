@@ -141,7 +141,25 @@ def read_existing_team(file):
             
     return players,bank
         
+def read_difficulty_rating(file,week = -1):
+    
+    difficulty = {}
+    
+    with open(file,"r") as f:
+        lines = [l for l in f]
+    
+    for l in lines[1:]:
+        l = l.split(",")
+                
+        team = l[0]
+        if week == -1:
+            difficulty[team] = [int(val) for val in l[1:]]
+        else:
+            difficulty[team] = int(l[week])
+            
         
+    return difficulty
+    
         
 def create_player_input(data_dir, prob_lose, games_per_team,  read_prev_team = True):
 
