@@ -1,0 +1,311 @@
+Arsenal
+Leno
+ARSGKP
+5.0	2.0%	1.0	1	90
+View player information
+
+Aston Villa
+Martínez
+AVLGKP
+5.5	32.8%	2.0	2	90
+View player information
+
+Brentford
+Raya
+BREGKP
+4.5	3.8%	8.0	8	90
+View player information
+
+Brighton
+Sánchez
+BHAGKP
+4.5	24.3%	2.0	2	90
+View player information
+
+Burnley
+Pope
+BURGKP
+5.5	3.8%	2.0	2	90
+View player information
+
+Chelsea
+Mendy
+CHEGKP
+6.0	10.1%	6.0	6	90
+View player information
+
+Crystal Palace
+Guaita
+CRYGKP
+4.5	5.2%	2.0	2	90
+View player information
+
+Everton
+Pickford
+EVEGKP
+5.0	6.8%	2.0	2	90
+View player information
+
+Leicester
+Schmeichel
+LEIGKP
+5.0	19.6%	9.0	9	90
+View player information
+
+Leeds
+Meslier
+LEEGKP
+5.0	3.8%	1.0	1	90
+View player information
+
+Liverpool
+Alisson
+LIVGKP
+6.0	6.8%	7.0	7	90
+View player information
+
+Man City
+Ederson
+MCIGKP
+6.0	10.4%	2.0	2	90
+View player information
+
+Man Utd
+de Gea
+MUNGKP
+5.0	3.3%	2.0	2	90
+View player information
+
+Newcastle
+Woodman
+NEWGKP
+4.5	0.5%	6.0	6	90
+View player information
+
+Norwich
+Krul
+NORGKP
+4.5	1.6%	2.0	2	90
+View player information
+
+Southampton
+McCarthy
+SOUGKP
+4.5	1.5%	2.0	2	90
+View player information
+
+Spurs
+Lloris
+TOTGKP
+5.5	4.7%	10.0	10	90
+View player information
+
+Watford
+Bachmann
+WATGKP
+4.5	2.2%	1.0	1	90
+View player information
+
+West Ham
+Fabianski
+WHUGKP
+5.0	2.1%	1.0	1	90
+View player information
+
+Wolves
+Sá
+WOLGKP
+5.0	0.4%	3.0	3	90
+0% chance of playingView player information
+
+Arsenal
+Rúnarsson
+ARSGKP
+4.0	1.5%	0.0	0	0
+View player information
+
+Arsenal
+Hein
+ARSGKP
+4.0	0.1%	0.0	0	0
+View player information
+
+Aston Villa
+Steer
+AVLGKP
+4.0	1.2%	0.0	0	0
+View player information
+
+Brentford
+Gunnarsson
+BREGKP
+4.0	1.5%	0.0	0	0
+View player information
+
+Brentford
+Fernández
+BREGKP
+4.5	0.0%	0.0	0	0
+View player information
+
+Brighton
+Steele
+BHAGKP
+4.0	2.6%	0.0	0	0
+0% chance of playingView player information
+
+Brighton
+Scherpen
+BHAGKP
+4.5	0.0%	0.0	0	0
+View player information
+
+Burnley
+Norris
+BURGKP
+4.5	0.1%	0.0	0	0
+View player information
+
+Burnley
+Hennessey
+BURGKP
+4.5	0.3%	0.0	0	0
+View player information
+
+Chelsea
+Arrizabalaga
+CHEGKP
+5.0	0.3%	0.0	0	0
+
+View player information
+
+Crystal Palace
+Butland
+CRYGKP
+4.5	0.5%	0.0	0	0
+View player information
+
+Everton
+Virgínia
+EVEGKP
+4.0	2.4%	0.0	0	0
+View player information
+
+Everton
+Begović
+EVEGKP
+4.0	2.4%	0.0	0	0
+View player information
+
+Leicester
+Ward
+LEIGKP
+4.0	3.7%	0.0	0	0
+View player information
+
+Leeds
+Klaesson
+LEEGKP
+4.5	0.2%	0.0	0	0
+View player information
+
+Liverpool
+Adrián
+LIVGKP
+4.5	0.3%	0.0	0	0
+View player information
+
+Liverpool
+Kelleher
+LIVGKP
+4.5	0.1%	0.0	0	0
+View player information
+
+Man City
+Steffen
+MCIGKP
+4.5	0.2%	0.0	0	0
+25% chance of playingView player information
+
+Man Utd
+Henderson
+MUNGKP
+4.9	1.2%	0.0	0	0
+View player information
+
+Man Utd
+Heaton
+MUNGKP
+4.0	0.5%	0.0	0	0
+0% chance of playingView player information
+
+Newcastle
+Darlow
+NEWGKP
+4.5	0.6%	0.0	0	0
+0% chance of playingView player information
+
+Newcastle
+Dubravka
+NEWGKP
+4.5	0.2%	0.0	0	0
+View player information
+
+Newcastle
+Gillespie
+NEWGKP
+4.0	0.2%	0.0	0	0
+View player information
+
+Norwich
+McGovern
+NORGKP
+4.0	0.7%	0.0	0	0
+View player information
+
+Norwich
+Gunn
+NORGKP
+4.0	1.5%	0.0	0	0
+View player information
+
+Southampton
+Forster
+SOUGKP
+4.5	1.2%	0.0	0	0
+View player information
+
+Spurs
+Gollini
+TOTGKP
+4.5	0.3%	0.0	0	0
+View player information
+
+Watford
+Foster
+WATGKP
+4.0	27.6%	0.0	0	0
+View player information
+
+West Ham
+Randolph
+WHUGKP
+4.5	0.2%	0.0	0	0
+View player information
+
+West Ham
+Areola
+WHUGKP
+5.0	1.2%	0.0	0	0
+View player information
+
+Wolves
+Söndergaard
+WOLGKP
+4.0	1.3%	0.0	0	0
+View player information
+
+Wolves
+Ruddy
+WOLGKP
+4.5	0.2%	0.0	0	0

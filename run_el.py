@@ -20,15 +20,19 @@ def calculate_expected_score(players,prob_lose,games_played):
         except KeyError:
             p.score = 0.0
             continue
-        
+            
+        N = len(p_lose)             #Number of games this round
+        if N == 0:
+            p.score = 0.0
+            continue
         
         N_team = games_played[team]
         
-        if p.minutes > 90:           
+        if p.minutes > 3*90:           
             score = a*p.form + (1-a) * (p.tot_points/N_team) #* p.minutes/(90*N_team) 
         else:
-            score = p.form   
-     
+            score = p.form*0.5
+
         factor = (1/3) / np.mean(p_lose) - 1.0    #1/3 is even match --> factor of 0. Use average over all games played this round
         factor *= 0.1
         
@@ -36,7 +40,6 @@ def calculate_expected_score(players,prob_lose,games_played):
         
         p.score = score*(1+factor)
 
-        N = len(p_lose)             #Number of games this round
 
         if N == 2:
             p.score *= 1.5
@@ -48,24 +51,20 @@ def calculate_expected_score(players,prob_lose,games_played):
 print("")
 
 
-n = 13
+n = 15
 loc= f"eliteserien\\2021\\post_round_{n}\\"
 
-games_played = {t:n+1 for t in TEAMS}
-games_played['Kristiansund BK'] -= 1
-games_played['Strømsgodset']    -= 1
-games_played['Odd']             -= 1
-games_played['Viking FK']       -= 1
-games_played['Sarpsborg 08']    -= 1
-games_played['Tromsø']          -= 1
-games_played['Lillestrøm']      -= 2
-games_played['FK Haugesund']    -= 2
-games_played['Sandefjord']      -= 2
-games_played['Mjøndalen']       -= 2
-games_played['Stabæk']          -= 2
+games_played = {t:n for t in TEAMS}
+games_played['Molde'] += 1
+games_played['Sarpsborg 08']    += 1
 
 
-prob_lose = ri.get_lose_prob(loc+"match_probs.txt")
+
+#prob_lose = ri.get_lose_prob(loc+"match_probs.txt")
+prob_lose = {t:[1/3] for t in TEAMS}
+prob_lose["Molde"] = []
+prob_lose["Sarpsborg 08"] = []
+
 
 players = []
 
@@ -79,10 +78,12 @@ calculate_expected_score(players,prob_lose,games_played)
 
 not_playing = {}
 not_playing["Odd"] = ["Bakenga"]
-not_playing["Bodø/Glimt"] = ["Sørli","Solbakken","Bjørkan"]
+not_playing["Bodø/Glimt"] = ["Sørli","Solbakken"]
 not_playing["Rosenborg"] = ["Zachariassen"]
 not_playing["FK Haugesund"] = ["Desler"]
-not_playing["Vålerenga"] = ["Borchgrevink","Dønnum"]
+not_playing["Vålerenga"] = ["Dønnum"]
+not_playing["Mjøndalen"] = ["Thomas"]
+#not_playing["Brann"] = ["Heggebø"]
 
 for team, out in not_playing.items():
     

@@ -1,0 +1,1345 @@
+View player information
+
+Arsenal
+Xhaka
+ARSMID
+5.0	1.0%	2.0	2	90
+View player information
+
+Arsenal
+Pépé
+ARSMID
+7.4	2.5%	2.0	2	90
+View player information
+
+Arsenal
+Smith Rowe
+ARSMID
+5.5	6.6%	2.0	2	90
+View player information
+
+Arsenal
+Sambi Lokonga
+ARSMID
+5.0	0.2%	2.0	2	90
+View player information
+
+Aston Villa
+McGinn
+AVLMID
+6.0	1.3%	7.0	7	90
+View player information
+
+Aston Villa
+Nakamba
+AVLMID
+4.5	0.2%	2.0	2	90
+View player information
+
+Brentford
+Nørgaard
+BREMID
+5.0	1.1%	8.0	8	90
+View player information
+
+Brentford
+Canós
+BREMID
+5.5	2.7%	11.0	11	90
+View player information
+
+Brentford
+Janelt
+BREMID
+5.0	0.1%	3.0	3	90
+View player information
+
+Brighton
+Groß
+BHAMID
+6.0	0.6%	6.0	6	90
+View player information
+
+Brighton
+March
+BHAMID
+5.5	0.1%	2.0	2	90
+View player information
+
+Brighton
+Bissouma
+BHAMID
+4.5	12.8%	2.0	2	90
+View player information
+
+Burnley
+Westwood
+BURMID
+5.5	0.7%	7.0	7	90
+View player information
+
+Burnley
+Gudmundsson
+BURMID
+5.5	0.1%	1.0	1	90
+View player information
+
+Chelsea
+Jorginho
+CHEMID
+6.0	5.2%	3.0	3	90
+View player information
+
+Chelsea
+Kovacic
+CHEMID
+5.0	0.8%	6.0	6	90
+View player information
+
+Chelsea
+Mount
+CHEMID
+7.5	20.0%	6.0	6	90
+View player information
+
+Crystal Palace
+McArthur
+CRYMID
+4.5	0.4%	2.0	2	90
+View player information
+
+Crystal Palace
+Zaha
+CRYMID
+7.0	6.6%	2.0	2	90
+View player information
+
+Everton
+Allan
+EVEMID
+4.5	1.5%	2.0	2	90
+View player information
+
+Everton
+Doucouré
+EVEMID
+5.5	0.9%	8.0	8	90
+View player information
+
+Leicester
+Tielemans
+LEIMID
+6.5	5.2%	3.0	3	90
+View player information
+
+Leicester
+Ndidi
+LEIMID
+5.0	1.7%	3.0	3	90
+View player information
+
+Leeds
+Klich
+LEEMID
+5.5	0.5%	2.0	2	90
+View player information
+
+Leeds
+Dallas
+LEEMID
+5.5	14.7%	5.0	5	90
+View player information
+
+Leeds
+Raphinha
+LEEMID
+6.5	16.5%	1.0	1	90
+View player information
+
+Liverpool
+Milner
+LIVMID
+5.0	0.1%	2.0	2	90
+View player information
+
+Liverpool
+Mané
+LIVMID
+12.0	3.8%	3.0	3	90
+View player information
+
+Liverpool
+Salah
+LIVMID
+12.5	56.3%	17.0	17	90
+View player information
+
+Man City
+Grealish
+MCIMID
+8.0	22.0%	1.0	1	90
+
+View player information
+
+Man City
+Gündogan
+MCIMID
+7.5	6.3%	2.0	2	90
+View player information
+
+Man City
+Torres
+MCIMID
+7.0	2.1%	2.0	2	90
+View player information
+
+Man City
+Fernandinho
+MCIMID
+5.0	0.5%	2.0	2	90
+View player information
+
+Man Utd
+Fred
+MUNMID
+5.0	0.8%	7.0	7	90
+View player information
+
+Man Utd
+Fernandes
+MUNMID
+12.1	57.7%	20.0	20	90
+View player information
+
+Man Utd
+Greenwood
+MUNMID
+7.5	9.4%	8.0	8	90
+View player information
+
+Newcastle
+Murphy
+NEWMID
+5.0	0.3%	7.0	7	90
+View player information
+
+Newcastle
+Hayden
+NEWMID
+4.5	0.2%	2.0	2	90
+View player information
+
+Newcastle
+Almirón
+NEWMID
+5.5	0.5%	2.0	2	90
+View player information
+
+Norwich
+Gilmour
+NORMID
+4.5	8.8%	2.0	2	90
+View player information
+
+Norwich
+Rupp
+NORMID
+4.5	0.1%	2.0	2	90
+View player information
+
+Norwich
+Lees-Melou
+NORMID
+5.0	0.1%	2.0	2	90
+View player information
+
+Southampton
+Ward-Prowse
+SOUMID
+6.5	4.0%	2.0	2	90
+View player information
+
+Southampton
+Djenepo
+SOUMID
+5.5	0.1%	2.0	2	90
+View player information
+
+Spurs
+Son
+TOTMID
+10.0	23.5%	10.0	10	90
+View player information
+
+Spurs
+Lucas Moura
+TOTMID
+6.5	1.4%	2.0	2	90
+View player information
+
+Spurs
+Dele
+TOTMID
+6.5	1.5%	3.0	3	90
+View player information
+
+Spurs
+Skipp
+TOTMID
+4.5	0.7%	3.0	3	90
+View player information
+
+Watford
+Sema
+WATMID
+5.5	0.1%	1.0	1	90
+View player information
+
+Watford
+Sarr
+WATMID
+6.0	5.2%	9.0	9	90
+View player information
+
+Watford
+Etebo
+WATMID
+4.5	0.2%	1.0	1	90
+View player information
+
+West Ham
+Rice
+WHUMID
+5.0	4.4%	2.0	2	90
+View player information
+
+West Ham
+Soucek
+WHUMID
+6.0	11.3%	8.0	8	90
+View player information
+
+West Ham
+Fornals
+WHUMID
+6.0	0.4%	5.0	5	90
+View player information
+
+Wolves
+Traoré
+WOLMID
+6.0	1.2%	2.0	2	90
+View player information
+
+Wolves
+Neves
+WOLMID
+5.5	1.5%	2.0	2	90
+View player information
+
+Spurs
+Højbjerg
+TOTMID
+5.0	2.9%	3.0	3	89
+View player information
+
+West Ham
+Bowen
+WHUMID
+6.5	1.5%	2.0	2	89
+View player information
+
+West Ham
+Benrahma
+WHUMID
+6.1	10.8%	12.0	12	87
+View player information
+
+Brentford
+Mbeumo
+BREMID
+5.5	1.3%	3.0	3	85
+
+View player information
+
+Norwich
+Cantwell
+NORMID
+5.5	0.7%	1.0	1	85
+View player information
+
+Wolves
+Trincão
+WOLMID
+6.0	0.4%	2.0	2	85
+View player information
+
+Burnley
+Cork
+BURMID
+4.5	0.2%	2.0	2	84
+View player information
+
+Everton
+Gray
+EVEMID
+5.5	0.4%	2.0	2	82
+View player information
+
+Liverpool
+Keita
+LIVMID
+5.0	0.2%	3.0	3	82
+0% chance of playingView player information
+
+Chelsea
+Pulisic
+CHEMID
+8.0	2.1%	8.0	8	81
+View player information
+
+Brentford
+Onyeka
+BREMID
+5.0	0.1%	3.0	3	79
+View player information
+
+Southampton
+Walcott
+SOUMID
+6.0	0.2%	2.0	2	79
+View player information
+
+Southampton
+Romeu
+SOUMID
+4.5	0.6%	2.0	2	79
+View player information
+
+Burnley
+McNeil
+BURMID
+6.0	0.3%	2.0	2	78
+View player information
+
+Man City
+Mahrez
+MCIMID
+9.0	7.7%	2.0	2	78
+View player information
+
+Watford
+Cleverley
+WATMID
+5.0	0.2%	5.0	5	78
+View player information
+
+Crystal Palace
+Riedewald
+CRYMID
+5.0	0.0%	2.0	2	76
+View player information
+
+Norwich
+Rashica
+NORMID
+5.5	0.2%	2.0	2	76
+View player information
+
+Spurs
+Bergwijn
+TOTMID
+6.0	0.7%	6.0	6	76
+View player information
+
+Brighton
+Trossard
+BHAMID
+6.5	1.1%	2.0	2	75
+View player information
+
+Man Utd
+Pogba
+MUNMID
+7.6	14.0%	16.0	16	74
+View player information
+
+Man Utd
+James
+MUNMID
+6.0	0.2%	2.0	2	74
+View player information
+
+Aston Villa
+Buendía
+AVLMID
+6.5	5.2%	2.0	2	71
+View player information
+
+Brighton
+Alzate
+BHAMID
+5.0	0.1%	2.0	2	71
+View player information
+
+Leicester
+Barnes
+LEIMID
+7.0	12.0%	3.0	3	71
+View player information
+
+Arsenal
+Martinelli
+ARSMID
+5.5	0.4%	2.0	2	70
+View player information
+
+Everton
+Townsend
+EVEMID
+5.5	0.8%	5.0	5	69
+View player information
+
+Man City
+Sterling
+MCIMID
+11.0	2.9%	2.0	2	69
+25% chance of playingView player information
+
+Newcastle
+Shelvey
+NEWMID
+5.5	0.1%	1.0	1	69
+View player information
+
+Leeds
+Harrison
+LEEMID
+6.0	4.2%	2.0	2	68
+View player information
+
+Man Utd
+McTominay
+MUNMID
+5.5	0.6%	2.0	2	68
+75% chance of playingView player information
+
+Watford
+Kucka
+WATMID
+5.5	0.0%	2.0	2	68
+View player information
+
+Wolves
+Moutinho
+WOLMID
+5.0	0.5%	2.0	2	65
+View player information
+
+Leicester
+Pérez
+LEIMID
+6.0	0.3%	3.0	3	61
+
+View player information
+
+Leicester
+Maddison
+LEIMID
+7.0	8.7%	3.0	3	61
+View player information
+
+Liverpool
+Chamberlain
+LIVMID
+6.0	0.2%	3.0	3	60
+View player information
+
+Liverpool
+Jota
+LIVMID
+7.5	13.1%	8.0	8	60
+View player information
+
+Aston Villa
+El Ghazi
+AVLMID
+6.0	1.1%	1.0	1	59
+View player information
+
+Crystal Palace
+Schlupp
+CRYMID
+5.5	0.1%	1.0	1	56
+View player information
+
+Aston Villa
+Ramsey
+AVLMID
+4.5	0.4%	1.0	1	45
+View player information
+
+Brighton
+Lallana
+BHAMID
+5.5	0.3%	1.0	1	45
+View player information
+
+Brighton
+Mwepu
+BHAMID
+6.0	0.1%	1.0	1	45
+View player information
+
+Arsenal
+Saka
+ARSMID
+6.4	11.8%	1.0	1	31
+View player information
+
+Aston Villa
+Bailey
+AVLMID
+6.5	2.7%	4.0	4	30
+View player information
+
+Liverpool
+Fabinho
+LIVMID
+5.5	0.9%	1.0	1	29
+View player information
+
+Leicester
+Soumaré
+LEIMID
+5.0	0.1%	1.0	1	28
+View player information
+
+Wolves
+Dendoncker
+WOLMID
+5.0	0.2%	1.0	1	24
+View player information
+
+Leeds
+Costa
+LEEMID
+5.5	0.2%	1.0	1	21
+View player information
+
+Man Utd
+Matic
+MUNMID
+4.5	0.3%	1.0	1	21
+View player information
+
+Watford
+Gosling
+WATMID
+5.0	0.1%	1.0	1	21
+View player information
+
+Everton
+Iwobi
+EVEMID
+6.0	0.2%	4.0	4	20
+View player information
+
+Newcastle
+Fraser
+NEWMID
+5.5	0.1%	1.0	1	20
+View player information
+
+Arsenal
+Nelson
+ARSMID
+5.0	0.0%	1.0	1	19
+0% chance of playingView player information
+
+Aston Villa
+Traoré
+AVLMID
+6.0	1.8%	4.0	4	18
+View player information
+
+Brighton
+Moder
+BHAMID
+4.5	0.9%	4.0	4	18
+View player information
+
+Man Utd
+Sancho
+MUNMID
+9.4	8.0%	1.0	1	15
+View player information
+
+Brighton
+Mac Allister
+BHAMID
+5.5	0.5%	9.0	9	14
+View player information
+
+Crystal Palace
+Rak-Sakyi
+CRYMID
+4.5	0.0%	1.0	1	13
+View player information
+
+Leeds
+Roberts
+LEEMID
+5.0	0.1%	1.0	1	13
+View player information
+
+Spurs
+Lo Celso
+TOTMID
+6.0	0.2%	1.0	1	13
+View player information
+
+Burnley
+Brownhill
+BURMID
+4.5	4.0%	1.0	1	11
+75% chance of playingView player information
+
+Man City
+De Bruyne
+MCIMID
+12.0	2.8%	1.0	1	11
+View player information
+
+Brentford
+Bidstrup
+BREMID
+4.5	0.1%	1.0	1	10
+View player information
+
+Southampton
+Tella
+SOUMID
+5.0	0.1%	1.0	1	10
+
+View player information
+
+Southampton
+Diallo
+SOUMID
+4.5	0.1%	1.0	1	10
+View player information
+
+Chelsea
+Havertz
+CHEMID
+8.4	9.3%	1.0	1	8
+View player information
+
+Liverpool
+Elliott
+LIVMID
+5.5	0.1%	1.0	1	7
+View player information
+
+Southampton
+Redmond
+SOUMID
+6.0	0.1%	1.0	1	7
+View player information
+
+Newcastle
+S.Longstaff
+NEWMID
+4.5	0.3%	1.0	1	6
+View player information
+
+Norwich
+Dowell
+NORMID
+5.5	0.1%	1.0	1	4
+View player information
+
+Wolves
+Gibbs-White
+WOLMID
+4.5	0.5%	1.0	1	4
+View player information
+
+Everton
+Gordon
+EVEMID
+4.5	0.0%	1.0	1	1
+View player information
+
+West Ham
+Yarmolenko
+WHUMID
+5.5	0.2%	1.0	1	1
+50% chance of playingView player information
+
+Arsenal
+Willian
+ARSMID
+6.4	0.3%	0.0	0	0
+View player information
+
+Arsenal
+Elneny
+ARSMID
+4.5	0.7%	0.0	0	0
+View player information
+
+Arsenal
+Maitland-Niles
+ARSMID
+5.5	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Arsenal
+Partey
+ARSMID
+5.0	0.1%	0.0	0	0
+View player information
+
+Arsenal
+Torreira
+ARSMID
+4.5	0.5%	0.0	0	0
+View player information
+
+Arsenal
+Ødegaard
+ARSMID
+5.5	0.0%	0.0	0	0
+View player information
+
+Aston Villa
+Hourihane
+AVLMID
+5.0	0.0%	0.0	0	0
+75% chance of playingView player information
+
+Aston Villa
+Sanson
+AVLMID
+5.0	0.0%	0.0	0	0
+0% chance of playingView player information
+
+Aston Villa
+Trézéguet
+AVLMID
+5.5	0.0%	0.0	0	0
+75% chance of playingView player information
+
+Aston Villa
+Douglas Luiz
+AVLMID
+4.5	0.8%	0.0	0	0
+View player information
+
+Aston Villa
+Ramsey
+AVLMID
+4.5	0.2%	0.0	0	0
+View player information
+
+Aston Villa
+Philogene-Bidace
+AVLMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Aston Villa
+Chukwuemeka
+AVLMID
+4.5	0.0%	0.0	0	0
+75% chance of playingView player information
+
+Brentford
+Fosu
+BREMID
+5.4	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Brentford
+Dasilva
+BREMID
+5.5	0.0%	0.0	0	0
+View player information
+
+Brentford
+Ghoddos
+BREMID
+5.5	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Brentford
+Jensen
+BREMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Brentford
+Zamburek
+BREMID
+4.5	0.8%	0.0	0	0
+25% chance of playingView player information
+
+Brentford
+Baptiste
+BREMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Brentford
+Wissa
+BREMID
+6.0	0.1%	0.0	0	0
+View player information
+
+Brighton
+Richards
+BHAMID
+4.5	0.0%	0.0	0	0
+
+View player information
+
+Brighton
+Caicedo
+BHAMID
+4.5	0.0%	0.0	0	0
+0% chance of playingView player information
+
+Burnley
+Stephens
+BURMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Chelsea
+Barkley
+CHEMID
+5.5	0.1%	0.0	0	0
+75% chance of playingView player information
+
+Chelsea
+Kanté
+CHEMID
+5.0	3.7%	0.0	0	0
+75% chance of playingView player information
+
+Chelsea
+Ziyech
+CHEMID
+7.4	0.3%	0.0	0	0
+25% chance of playingView player information
+
+Chelsea
+Loftus-Cheek
+CHEMID
+5.5	0.1%	0.0	0	0
+View player information
+
+Chelsea
+Hudson-Odoi
+CHEMID
+5.5	0.2%	0.0	0	0
+View player information
+
+Crystal Palace
+Gallagher
+CRYMID
+5.5	0.0%	0.0	0	0
+0% chance of playingView player information
+
+Crystal Palace
+Milivojevic
+CRYMID
+5.5	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Crystal Palace
+Eze
+CRYMID
+6.0	0.0%	0.0	0	0
+0% chance of playingView player information
+
+Crystal Palace
+Olise
+CRYMID
+5.5	0.0%	0.0	0	0
+View player information
+
+Crystal Palace
+Banks
+CRYMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Everton
+Delph
+EVEMID
+4.5	0.2%	0.0	0	0
+View player information
+
+Everton
+Sigurdsson
+EVEMID
+7.0	1.7%	0.0	0	0
+0% chance of playingView player information
+
+Everton
+James
+EVEMID
+7.0	1.3%	0.0	0	0
+View player information
+
+Everton
+André Gomes
+EVEMID
+5.0	0.2%	0.0	0	0
+View player information
+
+Everton
+Davies
+EVEMID
+5.0	0.1%	0.0	0	0
+View player information
+
+Everton
+Gbamin
+EVEMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Leicester
+Albrighton
+LEIMID
+5.5	0.2%	0.0	0	0
+View player information
+
+Leicester
+Mendy
+LEIMID
+4.5	0.5%	0.0	0	0
+View player information
+
+Leicester
+Praet
+LEIMID
+5.0	0.1%	0.0	0	0
+View player information
+
+Leicester
+Choudhury
+LEIMID
+4.5	0.1%	0.0	0	0
+View player information
+
+Leicester
+Dewsbury-Hall
+LEIMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Leeds
+Phillips
+LEEMID
+5.0	2.3%	0.0	0	0
+View player information
+
+Leeds
+Poveda
+LEEMID
+4.5	0.1%	0.0	0	0
+View player information
+
+Leeds
+Shackleton
+LEEMID
+4.5	0.1%	0.0	0	0
+View player information
+
+Leeds
+Summerville
+LEEMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Leeds
+Forshaw
+LEEMID
+4.5	0.0%	0.0	0	0
+75% chance of playingView player information
+
+Liverpool
+Henderson
+LIVMID
+5.0	0.7%	0.0	0	0
+75% chance of playingView player information
+
+Liverpool
+Thiago
+LIVMID
+5.5	1.0%	0.0	0	0
+
+View player information
+
+Liverpool
+Shaqiri
+LIVMID
+6.0	0.1%	0.0	0	0
+View player information
+
+Liverpool
+Minamino
+LIVMID
+5.4	0.1%	0.0	0	0
+75% chance of playingView player information
+
+Liverpool
+Jones
+LIVMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Liverpool
+Woodburn
+LIVMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Man City
+Bernardo
+MCIMID
+7.0	1.2%	0.0	0	0
+0% chance of playingView player information
+
+Man City
+Foden
+MCIMID
+8.0	1.0%	0.0	0	0
+View player information
+
+Man City
+Rodrigo
+MCIMID
+5.5	0.4%	0.0	0	0
+View player information
+
+Man City
+Palmer
+MCIMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Man City
+Edozie
+MCIMID
+5.0	0.0%	0.0	0	0
+75% chance of playingView player information
+
+Man Utd
+Lingard
+MUNMID
+7.0	1.5%	0.0	0	0
+0% chance of playingView player information
+
+Man Utd
+Rashford
+MUNMID
+9.5	0.2%	0.0	0	0
+View player information
+
+Man Utd
+van de Beek
+MUNMID
+5.9	0.1%	0.0	0	0
+View player information
+
+Man Utd
+Mata
+MUNMID
+5.0	0.1%	0.0	0	0
+View player information
+
+Man Utd
+Pereira
+MUNMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Man Utd
+Elanga
+MUNMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Newcastle
+Willock
+NEWMID
+6.0	1.7%	0.0	0	0
+View player information
+
+Newcastle
+Hendrick
+NEWMID
+5.0	0.1%	0.0	0	0
+View player information
+
+Newcastle
+M.Longstaff
+NEWMID
+4.5	0.1%	0.0	0	0
+View player information
+
+Norwich
+McLean
+NORMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Norwich
+Hernández
+NORMID
+5.0	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Norwich
+Placheta
+NORMID
+5.0	0.0%	0.0	0	0
+View player information
+
+Norwich
+Tzolis
+NORMID
+5.0	0.1%	0.0	0	0
+View player information
+
+Southampton
+S.Armstrong
+SOUMID
+6.0	0.4%	0.0	0	0
+0% chance of playingView player information
+
+Southampton
+Smallbone
+SOUMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Southampton
+Elyounoussi
+SOUMID
+5.5	0.0%	0.0	0	0
+View player information
+
+Spurs
+Sissoko
+TOTMID
+4.5	1.5%	0.0	0	0
+View player information
+
+Spurs
+Winks
+TOTMID
+4.5	1.2%	0.0	0	0
+View player information
+
+Spurs
+Ndombele
+TOTMID
+6.0	0.3%	0.0	0	0
+View player information
+
+Spurs
+Bryan
+TOTMID
+6.0	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Watford
+Chalobah
+WATMID
+5.0	0.0%	0.0	0	0
+
+View player information
+
+Watford
+Hughes
+WATMID
+5.0	0.1%	0.0	0	0
+View player information
+
+Watford
+Quina
+WATMID
+4.5	0.1%	0.0	0	0
+View player information
+
+Watford
+Louza
+WATMID
+5.5	0.0%	0.0	0	0
+View player information
+
+Watford
+Baah
+WATMID
+4.5	0.1%	0.0	0	0
+View player information
+
+Watford
+Tufan
+WATMID
+5.0	0.0%	0.0	0	0
+View player information
+
+West Ham
+Noble
+WHUMID
+4.5	0.7%	0.0	0	0
+View player information
+
+West Ham
+Lanzini
+WHUMID
+5.9	0.1%	0.0	0	0
+View player information
+
+West Ham
+Coventry
+WHUMID
+4.5	0.1%	0.0	0	0
+0% chance of playingView player information
+
+Wolves
+Podence
+WOLMID
+5.5	0.0%	0.0	0	0
+0% chance of playingView player information
+
+Wolves
+Neto
+WOLMID
+6.5	0.0%	0.0	0	0
+View player information
+
+Wolves
+Otasowie
+WOLMID
+4.5	0.3%	0.0	0	0
+View player information
+
+Wolves
+Cundle
+WOLMID
+4.5	0.0%	0.0	0	0
+View player information
+
+Wolves
+Campbell
+WOLMID
+4.5	0.1%	0.0	0	0

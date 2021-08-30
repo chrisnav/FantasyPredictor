@@ -1,0 +1,90 @@
+Bank:0.1
+	
+Kristiansund BK
+McDermott
+KBK
+4	90	0	0	0	1	0	0	0	0	8	0	0
+
+
+Molde
+Bjørnbak
+MOL
+0	90	0	0	0	3	0	0	1	0	0	0	0
+
+
+Vålerenga
+Tollås Nation
+VIF
+2	90	0	0	0	1	0	0	0	0	0	0	0
+
+
+Rosenborg
+Andersson
+RBK
+4	90	0	0	0	1	0	0	0	0	0	2	0
+
+
+Viking FK
+Tripic
+VIK
+8	86	1	0	0	2	0	0	0	0	0	1	0
+
+
+Sandefjord
+Jónsson
+SAN
+5	90	0	1	0	3	0	0	0	0	0	0	0
+
+
+Stabæk
+Edvardsen
+STB
+4	70	0	0	0	4	0	0	0	0	0	0	0
+
+
+Tromsø
+Mikkelsen
+TIL
+1	90	0	0	0	1	0	0	1	0	0	0	0
+
+
+Kristiansund BK
+Kartum
+KBK
+8	67	1	0	0	1	0	0	0	0	0	1	0
+
+
+Lillestrøm
+Lehne Olsen
+LSK
+2	90	0	0	0	1	0	0	0	0	0	0	0
+
+
+Molde
+Omoijuanfo
+MOL
+0	0	0	0	0	0	0	0	0	0	0	0	0
+
+
+Mjøndalen
+Thomas
+MJO
+0	0	0	0	0	0	0	0	0	0	0	0	0
+
+
+Viking FK
+Haugen
+VIK
+0	0	0	0	0	0	0	0	0	0	0	0	0
+
+
+Vålerenga
+Borchgrevink
+VIF
+0	0	0	0	0	0	0	0	0	0	0	0	0
+
+
+Odd
+Bakenga
+ODD
+0	0	0	0	0	0	0	0	0	0	0	0	0

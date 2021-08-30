@@ -116,7 +116,7 @@ def read_existing_team(file):
     team_short = ""
 
     for l in lines[1:]:
-        if len(l) < 2:
+        if len(l) < 2 or "View player information" in l:
             continue        
         
         if len(team) == 0:

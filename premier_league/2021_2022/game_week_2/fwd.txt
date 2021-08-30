@@ -1,0 +1,398 @@
+View player information
+
+Aston Villa
+Ings
+AVLFWD
+8.0	38.2%	7.0	7	90
+View player information
+
+Brentford
+Toney
+BREFWD
+6.5	29.7%	2.0	2	90
+View player information
+
+Brighton
+Maupay
+BHAFWD
+6.5	2.9%	5.0	5	90
+View player information
+
+Burnley
+Wood
+BURFWD
+7.0	2.6%	2.0	2	90
+View player information
+
+Chelsea
+Werner
+CHEFWD
+8.9	4.1%	2.0	2	90
+View player information
+
+Crystal Palace
+Ayew
+CRYFWD
+6.0	0.9%	2.0	2	90
+View player information
+
+Everton
+Calvert-Lewin
+EVEFWD
+8.0	13.1%	7.0	7	90
+View player information
+
+Leicester
+Vardy
+LEIFWD
+10.5	16.3%	5.0	5	90
+View player information
+
+Newcastle
+Saint-Maximin
+NEWFWD
+6.5	5.7%	6.0	6	90
+View player information
+
+Southampton
+Adams
+SOUFWD
+7.0	1.8%	5.0	5	90
+View player information
+
+Southampton
+A.Armstrong
+SOUFWD
+6.0	2.1%	6.0	6	90
+View player information
+
+West Ham
+Antonio
+WHUFWD
+7.6	28.4%	13.0	13	90
+View player information
+
+Wolves
+Jiménez
+WOLFWD
+7.5	3.4%	2.0	2	90
+View player information
+
+Everton
+Richarlison
+EVEFWD
+7.6	15.8%	11.0	11	88
+View player information
+
+Newcastle
+Wilson
+NEWFWD
+7.5	7.3%	6.0	6	84
+View player information
+
+Leeds
+Bamford
+LEEFWD
+8.0	16.5%	2.0	2	76
+View player information
+
+Norwich
+Pukki
+NORFWD
+6.0	6.4%	2.0	2	76
+View player information
+
+Burnley
+Rodriguez
+BURFWD
+5.5	1.0%	2.0	2	69
+75% chance of playingView player information
+
+Watford
+Dennis
+WATFWD
+5.0	3.9%	12.0	12	65
+View player information
+
+Arsenal
+Balogun
+ARSFWD
+5.0	0.5%	1.0	1	58
+View player information
+
+Crystal Palace
+Mateta
+CRYFWD
+5.5	0.2%	1.0	1	56
+View player information
+
+Leeds
+Rodrigo
+LEEFWD
+6.5	1.6%	1.0	1	45
+View player information
+
+Crystal Palace
+Benteke
+CRYFWD
+6.5	1.3%	1.0	1	33
+View player information
+
+Liverpool
+Firmino
+LIVFWD
+9.0	7.1%	7.0	7	29
+View player information
+
+Watford
+Cucho
+WATFWD
+5.0	1.6%	6.0	6	24
+View player information
+
+Burnley
+Barnes
+BURFWD
+5.5	1.9%	1.0	1	20
+View player information
+
+Man City
+Jesus
+MCIFWD
+8.5	3.2%	1.0	1	20
+View player information
+
+Leicester
+Iheanacho
+LEIFWD
+7.4	10.6%	1.0	1	18
+View player information
+
+Man Utd
+Martial
+MUNFWD
+7.9	1.6%	1.0	1	15
+View player information
+
+Norwich
+Idah
+NORFWD
+5.0	0.5%	1.0	1	13
+
+View player information
+
+Norwich
+Sargent
+NORFWD
+5.5	0.1%	1.0	1	13
+View player information
+
+Watford
+Deeney
+WATFWD
+5.5	3.1%	1.0	1	11
+View player information
+
+Burnley
+Vydra
+BURFWD
+5.5	0.9%	1.0	1	5
+View player information
+
+Newcastle
+Joelinton
+NEWFWD
+6.0	0.6%	1.0	1	5
+View player information
+
+Brentford
+Forss
+BREFWD
+5.5	0.2%	1.0	1	4
+View player information
+
+Wolves
+Fabio Silva
+WOLFWD
+6.0	0.8%	1.0	1	1
+50% chance of playingView player information
+
+Arsenal
+Aubameyang
+ARSFWD
+9.9	1.5%	0.0	0	0
+0% chance of playingView player information
+
+Arsenal
+Lacazette
+ARSFWD
+8.4	1.7%	0.0	0	0
+0% chance of playingView player information
+
+Arsenal
+Nketiah
+ARSFWD
+5.5	0.1%	0.0	0	0
+25% chance of playingView player information
+
+Aston Villa
+Watkins
+AVLFWD
+7.5	3.1%	0.0	0	0
+View player information
+
+Aston Villa
+Wesley
+AVLFWD
+5.5	0.3%	0.0	0	0
+25% chance of playingView player information
+
+Aston Villa
+Davis
+AVLFWD
+4.5	2.2%	0.0	0	0
+View player information
+
+Brentford
+Dervişoğlu
+BREFWD
+5.5	0.0%	0.0	0	0
+View player information
+
+Brighton
+Connolly
+BHAFWD
+5.5	0.2%	0.0	0	0
+0% chance of playingView player information
+
+Brighton
+Welbeck
+BHAFWD
+6.0	0.1%	0.0	0	0
+View player information
+
+Brighton
+Andone
+BHAFWD
+5.0	0.2%	0.0	0	0
+View player information
+
+Brighton
+Zeqiri
+BHAFWD
+4.5	0.6%	0.0	0	0
+View player information
+
+Burnley
+Richardson
+BURFWD
+4.5	0.4%	0.0	0	0
+View player information
+
+Chelsea
+Lukaku
+CHEFWD
+11.5	13.4%	0.0	0	0
+View player information
+
+Crystal Palace
+Street
+CRYFWD
+4.5	0.2%	0.0	0	0
+View player information
+
+Leicester
+Daka
+LEIFWD
+7.4	1.2%	0.0	0	0
+View player information
+
+Leeds
+Greenwood
+LEEFWD
+4.5	0.6%	0.0	0	0
+View player information
+
+Liverpool
+Origi
+LIVFWD
+5.0	1.2%	0.0	0	0
+75% chance of playingView player information
+
+Man Utd
+Cavani
+MUNFWD
+8.5	4.9%	0.0	0	0
+View player information
+
+Newcastle
+Gayle
+NEWFWD
+5.5	0.2%	0.0	0	0
+View player information
+
+Norwich
+Hugill
+NORFWD
+5.5	0.0%	0.0	0	0
+View player information
+
+Southampton
+Obafemi
+SOUFWD
+4.5	13.2%	0.0	0	0
+View player information
+
+Southampton
+Broja
+SOUFWD
+5.0	0.7%	0.0	0	0
+View player information
+
+Southampton
+Long
+SOUFWD
+5.5	0.2%	0.0	0	0
+75% chance of playingView player information
+
+Spurs
+Kane
+TOTFWD
+12.4	9.2%	0.0	0	0
+
+View player information
+
+Spurs
+Scarlett
+TOTFWD
+4.5	2.2%	0.0	0	0
+View player information
+
+Watford
+Gray
+WATFWD
+5.5	0.3%	0.0	0	0
+View player information
+
+Watford
+Success
+WATFWD
+5.0	0.5%	0.0	0	0
+View player information
+
+Watford
+Fletcher
+WATFWD
+5.0	0.2%	0.0	0	0
+0% chance of playingView player information
+
+Watford
+João Pedro
+WATFWD
+5.5	0.1%	0.0	0	0
+View player information
+
+Watford
+King
+WATFWD
+5.5	0.3%	0.0	0	0
