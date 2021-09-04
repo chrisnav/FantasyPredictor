@@ -178,7 +178,7 @@ class FantasyOptimizer():
 
         self.model = model          
       
-    def add_existing_team(self, existing_team,n_free_transf=1):
+    def add_existing_team(self, existing_team,n_free_transf=1,n_max_transf=15):
         
         model = self.model
         
@@ -190,7 +190,11 @@ class FantasyOptimizer():
 
         def changes_rule(m):
             return m.n_changes >= 15 - n_free_transf - m.n_keep
-        model.CostlyChanges = Constraint(rule = changes_rule)      
+        model.CostlyChanges = Constraint(rule = changes_rule)  
+
+        def max_changes_rule(m):
+            return m.n_changes <= n_max_transf - n_free_transf
+        model.MaxChanges = Constraint(rule = max_changes_rule)          
 
     def add_min_team_players(self,team,n):
         

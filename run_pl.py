@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 TEAMS = ["Arsenal","Aston Villa","Brentford","Brighton","Burnley","Chelsea","Crystal Palace","Everton","Leeds","Leicester","Liverpool","Man Utd","Man City","Newcastle","Norwich","Southampton","Spurs","West Ham","Watford","Wolves"]
 
-week = 2
+week = 4
 loc = f"premier_league\\2021_2022\\"
 
 players = []
@@ -76,11 +76,12 @@ for p in existing_players:
     p.display()
 print("")
 
-n_free_transf = 1
+n_free_transf = 2
+n_max_transf = 3
 
 opt = pr.FantasyOptimizer(r"C:\My Stuff\CPLEX 20\cplex.exe")
 opt.build_best_formation_model(players,budget = team_worth)
-opt.add_existing_team(existing_players,n_free_transf=n_free_transf)
+opt.add_existing_team(existing_players,n_free_transf=n_free_transf,n_max_transf=n_max_transf)
 
 #opt.add_min_team_players("Liverpool",2)
 

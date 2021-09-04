@@ -1,0 +1,88 @@
+Bank: 0
+
+Aston Villa
+Martínez
+AVLGKP
+GKP	3.0	2	9	CHE (A)
+View player information
+
+West Ham
+Cresswell
+WHUDEF
+DEF	4.7	5	14	SOU (A)
+
+Aston Villa
+Targett
+AVLDEF
+DEF	0.7	2	2	CHE (A)
+View player information
+
+Liverpool
+Alexander-Arnold
+LIVDEF
+DEF	7.3	4	22	LEE (A)
+View player information
+
+Spurs
+Son
+TOTMID
+MID	7.7	10	23	CRY (A)
+View player information
+
+Man Utd
+Fernandes
+MUNMID
+MID	7.7	2	23	NEW (H)
+View player information
+
+Leeds
+Harrison
+LEEMID
+MID	2.0	2	6	LIV (H)
+View player information
+
+Leeds
+Dallas
+LEEMID
+MID	3.0	2	9	LIV (H)
+View player information
+
+West Ham
+Soucek
+WHUMID
+MID	4.0	2	12	SOU (A)
+View player information
+
+Leeds
+Bamford
+LEEFWD
+FWD	4.7	8	14	LIV (H)
+View player information
+
+Spurs
+Kane
+TOTFWD
+FWD	0.3	1	1	CRY (A)
+
+Everton
+Virgínia
+EVEGKP
+GKP	0.0	0	0	BUR (H)
+View player information
+
+West Ham
+Johnson
+WHUDEF
+DEF	0.3	0	1	SOU (A)
+View player information
+
+Newcastle
+Manquillo
+NEWDEF
+DEF	0.0	0	0	MUN (A)
+0% chance of playingView player information
+
+Southampton
+Obafemi
+SOUFWD
+FWD	0.0	0	0	WHU (H)
