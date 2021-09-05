@@ -11,41 +11,15 @@ TEAMS = ["Arsenal","Aston Villa","Brentford","Brighton","Burnley","Chelsea","Cry
 
 week = 4
 loc = f"premier_league\\2021_2022\\"
-
-players = []
-for pos in ["gkp","def","mid","fwd"]:
-
-    file = loc+f"game_week_{week}\\{pos}.txt"
-    new_players = ri.read_position(file,pos)
     
-    players += new_players
-    
+url = "https://fantasy.premierleague.com/api/bootstrap-static/"   
+url_team = f"https://fantasy.premierleague.com/api/entry/381388/event/{week-1}/picks/"
+url_fdr = "https://fantasy.premierleague.com/api/fixtures/"
 
-difficulty = ri.read_difficulty_rating(loc+"difficulty_rating.csv")
+players,teams = ri.scrape_players(url)
+difficulty = ri.scrape_difficulty_rating(url_fdr,teams)
+existing_players,bank,n_free_transf = ri.scrape_exisitng_team(url_team,players)
 
-#for t,diff in difficulty.items():
-#
-#    alpha = [0.2*2**(-i) for i in range(len(diff))]
-#    print(t,diff,sum(a*(3-d) for a,d in zip(alpha,diff)))
-##plt.plot(alpha,"k")
-##plt.show()
-#sys.exit()
-
-existing_player_list,bank = ri.read_existing_team(loc+f"game_week_{week}\\existing_team.txt")
-print(bank)
-
-existing_players = []
-for player_id in existing_player_list:
-    
-    player_id = player_id.split("_")
-    name = player_id[0]
-    team = player_id[1]
-
-    for p in players:                        
-        if p.name == name and p.team == team:            
-            existing_players.append(p)     
-            break
-            
     
 team_worth = bank
 for p in existing_players:
@@ -62,7 +36,7 @@ for p in players:
         p.score = 0.0
         continue    
     
-    p.score = p.tot_points
+    p.score = p.form #p.tot_points
     #print(p.name,p.tot_points)
     
     diff = [3-d for d in difficulty[p.team][week-1:]]  #1 is easy, 5 hard, 3 is neutral
@@ -76,12 +50,25 @@ for p in existing_players:
     p.display()
 print("")
 
-n_free_transf = 2
-n_max_transf = 3
+print("Bank:",bank)
+print("Total value:", team_worth)
+print("Free transfers:",n_free_transf)
+print("")
+
+n_max_transf = 15
+
+bench_boost = False
+free_hit = False
+
+if free_hit:    
+    n_free_transf = 15
+    n_max_transf = 15
+    
 
 opt = pr.FantasyOptimizer(r"C:\My Stuff\CPLEX 20\cplex.exe")
-opt.build_best_formation_model(players,budget = team_worth)
+opt.build_best_formation_model(players,budget = team_worth,bench_boost=bench_boost)
 opt.add_existing_team(existing_players,n_free_transf=n_free_transf,n_max_transf=n_max_transf)
+
 
 #opt.add_min_team_players("Liverpool",2)
 

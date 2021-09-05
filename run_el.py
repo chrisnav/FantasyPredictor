@@ -4,8 +4,6 @@ import sys
 import numpy as np
 from prettyplotting import PrettyPlot as pp
 
-TEAMS = ['Kristiansund BK','Odd','Sandefjord','Molde','Bodø/Glimt','Mjøndalen','Lillestrøm','FK Haugesund','Sarpsborg 08','Brann','Strømsgodset','Rosenborg','Viking FK','Vålerenga','Stabæk','Tromsø']
-
 def calculate_expected_score(players,prob_lose,games_played):
 
     a = 0.95    #Form weight
@@ -48,31 +46,20 @@ def calculate_expected_score(players,prob_lose,games_played):
         elif N > 3:
             p.score *= 3
                     
-print("")
 
+game_week = 18
 
-n = 15
-loc= f"eliteserien\\2021\\post_round_{n}\\"
+url = "https://fantasy.eliteserien.no/api/bootstrap-static/"     
+url_team = f"https://fantasy.eliteserien.no/api/entry/29209/event/{game_week-1}/picks/"
 
-games_played = {t:n for t in TEAMS}
-games_played['Molde'] += 1
-games_played['Sarpsborg 08']    += 1
+players,teams = ri.scrape_players(url)
+existing_players,bank,n_free_transf = ri.scrape_exisitng_team(url_team,players)
 
+games_played = {t["name"]:game_week-1 for t in teams}
 
-
-#prob_lose = ri.get_lose_prob(loc+"match_probs.txt")
-prob_lose = {t:[1/3] for t in TEAMS}
-prob_lose["Molde"] = []
-prob_lose["Sarpsborg 08"] = []
-
-
-players = []
-
-for pos in ["gkp","def","mid","fwd"]:
-    file = loc+f"{pos}.txt"
-    new_players = ri.read_position(file,pos)
-    
-    players += new_players
+prob_lose = {t["name"]:[1/3] for t in teams}
+#prob_lose["Molde"] = []
+#prob_lose["Sarpsborg 08"] = []
     
 calculate_expected_score(players,prob_lose,games_played)
 
@@ -83,6 +70,8 @@ not_playing["Rosenborg"] = ["Zachariassen"]
 not_playing["FK Haugesund"] = ["Desler"]
 not_playing["Vålerenga"] = ["Dønnum"]
 not_playing["Mjøndalen"] = ["Thomas"]
+not_playing["Viking FK"] = ["Haugen","Tripic"]
+
 #not_playing["Brann"] = ["Heggebø"]
 
 for team, out in not_playing.items():
@@ -92,32 +81,22 @@ for team, out in not_playing.items():
             continue
         if p.name in out:
             p.score = 0.0
-            
-existing_player_list,bank = ri.read_existing_team(loc+"existing_team.txt")
-print(existing_player_list)
-existing_players = []
-for player_id in existing_player_list:
-    
-    player_id = player_id.split("_")
-    name = player_id[0]
-    team = player_id[1]
-
-    for p in players:                        
-        if p.name == name and p.team == team:            
-            existing_players.append(p)     
-            break
-            
-    
+                
 team_worth = bank
+print("Existing players:")
 for p in existing_players:
     p.display()
     team_worth += p.cost
+
+print("")
+print("Bank:",bank)
+print("Total value:",team_worth)
+print("Free transfers:",n_free_transf)
 print("")
 
 rik_onkel = False
 spiss_rush = False
 
-n_free_transf = 1
 
 if rik_onkel:    
     team_worth = 10000

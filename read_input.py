@@ -1,5 +1,146 @@
 import predict as pr
+import requests as req
+import json
+import sys
 
+class Player(object):
+    def __init__(self,name,cost,form,tot_points,minutes,position,team,player_id = -1, real_name = ""):
+        self.name = name
+        self.cost = cost
+        self.position = position
+        self.team = team
+        self.form = form
+        self.tot_points = tot_points
+        self.minutes = minutes
+        self.player_id = player_id
+        
+        if len(real_name) > 0:
+            self.real_name = real_name
+        else:
+            self.real_name = name
+        
+        self.score = 0.0        
+        self.is_chosen = False
+        self.is_cap = False
+        self.on_pitch = False
+        self.transferred = False
+        
+    def same_player(self,p):
+        
+        if (self.name not in p.real_name) and (p.name not in self.real_name):
+            return False
+        
+        if self.position != p.position:
+            return False
+        
+        if self.team != p.team:
+            return False
+                
+        return True
+        
+    def display(self):
+        print(f"Player: {self.name}, {self.team}, {self.position}. Cost {self.cost}, Score {self.score}")
+
+def scrape_players(url):    
+       
+    r = req.get(url)
+    r = json.loads(r.content)
+
+    #rounds = r["events"]
+    teams = r["teams"]
+    
+    team_code_to_name = {t["code"]:t["name"] for t in teams}
+    
+    elements = r["elements"] #element_type: 1 = gkp, 2 = def, 3 = mid, 4 = fwd
+    players = []
+    
+    #print(elements[0])
+    #
+    #return
+    
+    for e in elements:
+
+        et = e["element_type"]
+        
+        if et == 1:
+            pos = "gkp"
+        elif et == 2:
+            pos = "def"
+        elif et == 3:
+            pos = "mid"
+        elif et == 4:
+            pos = "fwd"
+        else:
+            print("Unknown position ",et,"for player:")
+            print(p)        
+            continue
+        
+        player_id = e["id"]
+        real_name = e["first_name"]+" "+e["second_name"]
+        name = e["web_name"]
+        team = team_code_to_name[e["team_code"]]
+        tot_points = float(e["total_points"])
+        form = float(e["form"])
+        minutes = float(e["minutes"])
+        cost = float(e["now_cost"])*0.1
+
+        p = Player(name,cost,form,tot_points,minutes,pos,team,player_id=player_id, real_name=real_name)
+        
+        players.append(p)
+    
+    return players,teams
+    
+def scrape_difficulty_rating(url_fdr,teams):
+
+    team_id_to_name = {t["id"]:t["name"] for t in teams}
+
+    difficulty = {t["name"]:[] for t in teams}
+    
+    r = req.get(url_fdr)
+    r = json.loads(r.content)
+
+    for match in r:
+        
+        home = team_id_to_name[match["team_h"]]
+        away = team_id_to_name[match["team_a"]]
+        
+        difficulty[home].append(match["team_h_difficulty"])
+        difficulty[away].append(match["team_a_difficulty"])    
+        
+    return difficulty
+        
+def scrape_exisitng_team(url_team,players):
+
+    r = req.get(url_team)
+    r = json.loads(r.content)
+
+    existing_team = []
+    for elemetn in r["picks"]:
+        
+        pid = elemetn["element"]
+        
+        for p in players:
+            if p.player_id == pid:
+                existing_team.append(p)
+                break    
+    
+    if len(existing_team) != 15:
+        print(f"All existing players not found, {len(existing_team)} players in list!")
+        for p in existing_team:
+            p.display()
+        sys.exit()
+        
+    bank = r["entry_history"]["bank"]*0.1
+    
+    n_transfers = r["entry_history"]["event_transfers"]
+    if n_transfers == 0:
+        n_free_transfers = 2
+    else:
+        n_free_transfers = 1
+    
+    return existing_team, bank, n_free_transfers
+        
+    
 def read_team(team_file,team):
 
     ##This is for PL fantasy
@@ -39,7 +180,7 @@ def read_team(team_file,team):
                 cost = float(l_split[0])
                 points = float(l_split[1])
                 
-                players.append(pr.Player(name,cost,points,pos,team))
+                players.append(Player(name,cost,points,pos,team))
         
                 name = ""
                 cost = -1                                
@@ -92,7 +233,7 @@ def read_position(position_file,pos):
             minutes = float(l_split[4])
             
            
-            p = pr.Player(name,cost,form,tot_points,minutes,pos,team)
+            p = Player(name,cost,form,tot_points,minutes,pos,team)
             players.append(p)
             
             team = ""

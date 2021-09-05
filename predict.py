@@ -13,25 +13,6 @@ COLOR = {
     "ENDC": "\033[0m",
 }
 
-class Player(object):
-    def __init__(self,name,cost,form,tot_points,minutes,position,team):
-        self.name = name
-        self.cost = cost
-        self.position = position
-        self.team = team
-        self.form = form
-        self.tot_points = tot_points
-        self.minutes = minutes
-        
-        self.score = 0.0        
-        self.is_chosen = False
-        self.is_cap = False
-        self.on_pitch = False
-        self.transferred = False
-        
-    def display(self):
-        print(f"Player: {self.name}, {self.team}, {self.position}. Cost {self.cost}, Score {self.score}")
-
 class FantasyOptimizer():
     
     def __init__(self, cplex_path):
@@ -51,7 +32,7 @@ class FantasyOptimizer():
         
         return solver
 
-    def build_best_formation_model(self,players,existing_players=[],budget = 100.0):
+    def build_best_formation_model(self,players,budget = 100.0,bench_boost=False):
         
         self.players = players
 
@@ -173,7 +154,10 @@ class FantasyOptimizer():
             bench_score = sum(m.Score[i]*(m.in_squad[i]-m.on_pitch[i,j]) for i in model.I for j in model.J)/len(model.J)
             #smoothing_score = 0.05*sum(m.Score[i]*m.in_squad[i] for i in model.I)/15
             
-            return cap_score + 0.99*form_score + 0.01*bench_score - 6*m.n_changes
+            if bench_boost:
+                return cap_score + form_score + bench_score - 6*m.n_changes
+            else:            
+                return cap_score + 0.99*form_score + 0.01*bench_score - 6*m.n_changes
         model.OBJ = Objective(rule=objective_rule,sense=maximize)        
 
         self.model = model          
@@ -218,6 +202,7 @@ class FantasyOptimizer():
         N_cap = 0 
         
         self.chosen_players = []
+        self.transferred_out = []
         self.captain = None
         self.opt_form = None
         self.opt_j = -1        
@@ -226,7 +211,10 @@ class FantasyOptimizer():
         self.n_keep = self.model.n_keep.value
                 
         try:
-            existing_players = model.I_existing            
+            existing_players = model.I_existing   
+            for i in existing_players:
+                if model.in_squad[i].value < 0.999:
+                    self.transferred_out.append(self.players[i])            
         except:
             existing_players = []
 
@@ -252,7 +240,6 @@ class FantasyOptimizer():
                 
                 if i not in existing_players:
                     player.transferred = True
-                    player.display()
                 
                 if model.on_pitch[i,opt_j].value >= 0.999:
                     player.on_pitch = True
@@ -333,5 +320,12 @@ class FantasyOptimizer():
         print("Captain:")
         print(self.captain.name,self.captain.team,self.captain.cost,self.captain.score)
         print("")        
+    
+        if len(self.transferred_out) > 0:
 
+            print("Players transferred out:")
+            for p in self.transferred_out:
+                p.display()
+
+    
 
