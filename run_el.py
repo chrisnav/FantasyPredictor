@@ -107,9 +107,11 @@ if spiss_rush:
         if p.position=="fwd":
             p.score *= 2
     
-    
-opt = pr.FantasyOptimizer(r"C:\My Stuff\CPLEX 20\cplex.exe")
 
+solver_path = r"C:\Users\Christian\CPLEX 20_10\cplex.exe"
+#solver_path = r"C:\My Stuff\CPLEX 20\cplex.exe"
+
+opt = pr.FantasyOptimizer(solver_path)
 opt.build_best_formation_model(players,budget = team_worth)
 opt.add_existing_team(existing_players,n_free_transf=n_free_transf)
 #opt.add_min_team_players("Rosenborg",1)  

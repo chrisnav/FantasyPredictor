@@ -65,7 +65,10 @@ if free_hit:
     n_max_transf = 15
     
 
-opt = pr.FantasyOptimizer(r"C:\My Stuff\CPLEX 20\cplex.exe")
+solver_path = r"C:\Users\Christian\CPLEX 20_10\cplex.exe"
+#solver_path = r"C:\My Stuff\CPLEX 20\cplex.exe"
+
+opt = pr.FantasyOptimizer(solver_path)
 opt.build_best_formation_model(players,budget = team_worth,bench_boost=bench_boost)
 opt.add_existing_team(existing_players,n_free_transf=n_free_transf,n_max_transf=n_max_transf)
 
