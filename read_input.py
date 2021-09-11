@@ -4,7 +4,7 @@ import json
 import sys
 
 class Player(object):
-    def __init__(self,name,cost,form,tot_points,minutes,position,team,player_id = -1, real_name = ""):
+    def __init__(self,name,cost,form,tot_points,minutes,assists,goals_conceded,clean_sheets,points_last_round,position,team,player_id = -1, real_name = ""):
         self.name = name
         self.cost = cost
         self.position = position
@@ -12,6 +12,11 @@ class Player(object):
         self.form = form
         self.tot_points = tot_points
         self.minutes = minutes
+        self.assists = assists
+        self.goals_conceded = goals_conceded
+        self.clean_sheets = clean_sheets
+        self.points_last_round = points_last_round
+
         self.player_id = player_id
         
         if len(real_name) > 0:
@@ -75,6 +80,7 @@ def scrape_players(url):
             print(p)        
             continue
         
+        
         player_id = e["id"]
         real_name = e["first_name"]+" "+e["second_name"]
         name = e["web_name"]
@@ -83,8 +89,12 @@ def scrape_players(url):
         form = float(e["form"])
         minutes = float(e["minutes"])
         cost = float(e["now_cost"])*0.1
+        assists = int(e["assists"])
+        clean_sheets = int(e["clean_sheets"])
+        goals_conceded = int(e["goals_conceded"])
+        points_last_round = int(e["event_points"])
 
-        p = Player(name,cost,form,tot_points,minutes,pos,team,player_id=player_id, real_name=real_name)
+        p = Player(name,cost,form,tot_points,minutes,assists,goals_conceded,clean_sheets,points_last_round,pos,team,player_id=player_id, real_name=real_name,)
         
         players.append(p)
     
@@ -139,6 +149,33 @@ def scrape_exisitng_team(url_team,players):
         n_free_transfers = 1
     
     return existing_team, bank, n_free_transfers
+    
+def read_linear_scoring_model(file):
+    
+    linear_model = {i:{j:[] for j in range(2,6)} for i in range(1,5)}
+    
+    with open(file,"r") as f:
+        lines = [l for l in f]
+    
+    for l in lines[1:]:
+        l = l.split(";")
+        
+        position = int(l[0])
+        fdr = int(l[1])
+        const = float(l[2])
+        points_last_game = float(l[3])
+        average_points = float(l[4])
+        average_minutes = float(l[5])
+        average_assists = float(l[6])
+        average_goals_conceded = float(l[7])
+        average_clean_sheets = float(l[8])
+        
+        if fdr == -1:
+            linear_model[position] = [const,points_last_game,average_points,average_minutes,average_assists,average_goals_conceded,average_clean_sheets]
+        else:
+            linear_model[position][fdr] = [const,points_last_game,average_points,average_minutes,average_assists,average_goals_conceded,average_clean_sheets]
+        
+    return linear_model
         
     
 def read_team(team_file,team):

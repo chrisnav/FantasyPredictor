@@ -3,6 +3,7 @@ import read_input as ri
 import sys
 import numpy as np
 from prettyplotting import PrettyPlot as pp
+import matplotlib.pyplot as plt
 
 def calculate_expected_score(players,prob_lose,games_played):
 
@@ -45,8 +46,31 @@ def calculate_expected_score(players,prob_lose,games_played):
             p.score *= 2
         elif N > 3:
             p.score *= 3
-                    
+            
+            
+def calculate_score(players,week):
+              
+    lin_model = ri.read_linear_scoring_model("simple_linear_model.txt")
+    diff = []
+    for p in players:
+    
+        if p.position == "gkp":
+            pos = 1
+        elif p.position == "def":
+            pos = 2
+        elif p.position == "mid":
+            pos = 3
+        elif p.position == "fwd":
+            pos = 4       
+        else:
+            print("Unknown position",p.position)
 
+        mod = lin_model[pos]
+        vals = [p.points_last_round,p.tot_points/week,p.minutes/week,p.assists/week,p.goals_conceded/week,p.clean_sheets/week]
+        score = mod[0] + sum(v*c for v,c in zip(vals,mod[1:]))
+
+        p.score = score
+            
 game_week = 18
 
 url = "https://fantasy.eliteserien.no/api/bootstrap-static/"     
@@ -61,18 +85,19 @@ prob_lose = {t["name"]:[1/3] for t in teams}
 #prob_lose["Molde"] = []
 #prob_lose["Sarpsborg 08"] = []
     
-calculate_expected_score(players,prob_lose,games_played)
+#calculate_expected_score(players,prob_lose,games_played)
+calculate_score(players,game_week-1)
+
 
 not_playing = {}
 not_playing["Odd"] = ["Bakenga"]
-not_playing["Bodø/Glimt"] = ["Sørli","Solbakken"]
+not_playing["Bodø/Glimt"] = ["Sørli"]
 not_playing["Rosenborg"] = ["Zachariassen"]
 not_playing["FK Haugesund"] = ["Desler"]
 not_playing["Vålerenga"] = ["Dønnum"]
 not_playing["Mjøndalen"] = ["Thomas"]
 not_playing["Viking FK"] = ["Haugen","Tripic"]
-
-#not_playing["Brann"] = ["Heggebø"]
+not_playing["Stabæk"] = ["Edvardsen"]
 
 for team, out in not_playing.items():
     
@@ -108,8 +133,8 @@ if spiss_rush:
             p.score *= 2
     
 
-solver_path = r"C:\Users\Christian\CPLEX 20_10\cplex.exe"
-#solver_path = r"C:\My Stuff\CPLEX 20\cplex.exe"
+#solver_path = r"C:\Users\Christian\CPLEX 20_10\cplex.exe"
+solver_path = r"C:\My Stuff\CPLEX 20\cplex.exe"
 
 opt = pr.FantasyOptimizer(solver_path)
 opt.build_best_formation_model(players,budget = team_worth)
