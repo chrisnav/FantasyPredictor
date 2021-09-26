@@ -69,21 +69,24 @@ def get_player_stats(season):
         goals_scored = int(l[goals_scored_index])
 
         if l[home_index].lower() == "true":
+            is_home = 1
             fdr = events[event_id]["team_h_fdr"]
         elif l[home_index].lower() == "false":
+            is_home = 0
             fdr = events[event_id]["team_a_fdr"]
         else:
             print("ooops:",l[home_index])
             sys.exit()
             
         if player_id not in players.keys():
-            players[player_id] = {"points":[],"fdr":[],"minutes":[],"assists":[],"goals_conceded":[],"clean_sheets":[],"goals_scored":[]}
+            players[player_id] = {"points":[],"fdr":[],"minutes":[],"assists":[],"goals_conceded":[],"clean_sheets":[],"goals_scored":[],"is_home":[]}
             
         players[player_id]["points"].append(points)
         players[player_id]["assists"].append(assists)
         players[player_id]["goals_conceded"].append(goals_conceded)
         players[player_id]["clean_sheets"].append(clean_sheets)
         players[player_id]["goals_scored"].append(goals_scored)
+        players[player_id]["is_home"].append(is_home)
 
         players[player_id]["fdr"].append(fdr)
         players[player_id]["minutes"].append(minutes)
@@ -117,6 +120,7 @@ def create_fdr_model(players):
     goals_conceded = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
     clean_sheets = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
     goals_scored = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
+    is_home = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
     score = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
 
     for pid,p in players.items():
@@ -134,14 +138,15 @@ def create_fdr_model(players):
             goals_conceded[fdr][pos].append(np.mean(p["goals_conceded"][:i]))       
             clean_sheets[fdr][pos].append(np.mean(p["clean_sheets"][:i]))       
             goals_scored[fdr][pos].append(np.mean(p["goals_scored"][:i]))       
-            
+            is_home[fdr][pos].append(p["is_home"][i])
+
             score[fdr][pos].append(p["points"][i])
 
     print("")
 
     fitted_model = {}
     #var_names = ["const","points_last_game","average_points","average_minutes","average_assists","average_goals_conceded","average_clean_sheets","average_goals_scored"]
-    var_names = ["const","points_last_game","average_points","average_minutes","average_assists","average_goals_conceded","average_clean_sheets"]
+    var_names = ["const","points_last_game","average_points","average_minutes","average_assists","average_goals_conceded","average_clean_sheets","is_home"]
 
     for i in range(1,5):
         
@@ -161,9 +166,9 @@ def create_fdr_model(players):
             x4 = np.array(assists[j][i])
             x5 = np.array(goals_conceded[j][i])
             x6 = np.array(clean_sheets[j][i])
-            #x7 = np.array(goals_scored[j][i])
+            x7 = np.array(is_home[j][i])
                     
-            all_x = [x1,x2,x3,x4,x5,x6]#,x7]
+            all_x = [x1,x2,x3,x4,x5,x6,x7]
 
             x = np.array(all_x).T             
             
@@ -249,6 +254,8 @@ def create_simple_model(players):
     goals_conceded = {i:[] for i in range(1,5)}
     clean_sheets = {i:[] for i in range(1,5)}
     goals_scored = {i:[] for i in range(1,5)}
+    is_home = {i:[] for i in range(1,5)}    
+
     score = {i:[] for i in range(1,5)}    
 
     for pid,p in players.items():
@@ -266,6 +273,7 @@ def create_simple_model(players):
             goals_conceded[pos].append(np.mean(p["goals_conceded"][:i]))   
             clean_sheets[pos].append(np.mean(p["clean_sheets"][:i]))   
             goals_scored[pos].append(np.mean(p["goals_scored"][:i]))   
+            is_home[pos].append(p["is_home"][i])
             
             score[pos].append(p["points"][i])
 
@@ -274,7 +282,7 @@ def create_simple_model(players):
     fitted_model = {}
 
     #var_names = ["const","points_last_game","average_points","average_minutes","average_assists","average_goals_conceded","average_clean_sheets","average_goals_scored"]
-    var_names = ["const","points_last_game","average_points","average_minutes","average_assists","average_goals_conceded","average_clean_sheets"]
+    var_names = ["const","points_last_game","average_points","average_minutes","average_assists","average_goals_conceded","average_clean_sheets","is_home"]
 
     for i in range(1,5):
         
@@ -288,9 +296,9 @@ def create_simple_model(players):
         x4 = np.array(assists[i])
         x5 = np.array(goals_conceded[i])
         x6 = np.array(clean_sheets[i])
-        #x7 = np.array(goals_scored[i])
+        x7 = np.array(is_home[i])
                 
-        all_x = [x1,x2,x3,x4,x5,x6]#,x7]
+        all_x = [x1,x2,x3,x4,x5,x6,x7]
 
         x = np.array(all_x).T
 
@@ -391,4 +399,4 @@ for i,season in enumerate(seasons):
     
 
 create_fdr_model(players)    
-create_simple_model(players)
+#create_simple_model(players)

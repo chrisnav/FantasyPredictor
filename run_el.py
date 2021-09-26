@@ -5,7 +5,7 @@ import numpy as np
 from prettyplotting import PrettyPlot as pp
 import matplotlib.pyplot as plt
 
-def calculate_expected_score(players,prob_lose,games_played):
+def calculate_expected_score_old(players,prob_lose,games_played):
 
     a = 0.95    #Form weight
     #a = 1.0
@@ -48,7 +48,7 @@ def calculate_expected_score(players,prob_lose,games_played):
             p.score *= 3
             
             
-def calculate_score(players,week):
+def calculate_expected_score(players,home_teams,away_teams,n_norm_week,future_week):
               
     lin_model = ri.read_linear_scoring_model("simple_linear_model.txt")
     diff = []
@@ -65,28 +65,45 @@ def calculate_score(players,week):
         else:
             print("Unknown position",p.position)
 
-        mod = lin_model[pos]
-        vals = [p.points_last_round,p.tot_points/week,p.minutes/week,p.assists/week,p.goals_conceded/week,p.clean_sheets/week]
-        score = mod[0] + sum(v*c for v,c in zip(vals,mod[1:]))
-
-        p.score = score
+        n_home = home_teams.count(p.team)
+        n_away = away_teams.count(p.team)
+        
+        if n_home + n_away == 0:        
+            p.score.append(0.0)
+            continue
             
-game_week = 18
+        mod = lin_model[pos]
+
+        if len(p.score) == 0:
+            prev_points = p.points_last_round
+            average_points = p.tot_points/n_norm_week
+        else:
+            prev_points = p.score[-1]
+            average_points = (p.tot_points+sum(p.score))/(n_norm_week+future_week)
+
+        score = 0.0
+        for i in range(n_home):
+            is_home = 1
+
+            vals = [prev_points,average_points,p.minutes/n_norm_week,p.assists/n_norm_week,p.goals_conceded/n_norm_week,p.clean_sheets/n_norm_week,is_home]
+            score += mod[0] + sum(v*c for v,c in zip(vals,mod[1:]))     
+            
+        for i in range(n_away):
+            is_home = 0
+
+            vals = [prev_points,average_points,p.minutes/n_norm_week,p.assists/n_norm_week,p.goals_conceded/n_norm_week,p.clean_sheets/n_norm_week,is_home]
+            score += mod[0] + sum(v*c for v,c in zip(vals,mod[1:]))     
+
+        p.score.append(score)
+            
+game_week = 20
 
 url = "https://fantasy.eliteserien.no/api/bootstrap-static/"     
 url_team = f"https://fantasy.eliteserien.no/api/entry/29209/event/{game_week-1}/picks/"
+url_fix = "https://fantasy.eliteserien.no/api/fixtures/"
 
 players,teams = ri.scrape_players(url)
 existing_players,bank,n_free_transf = ri.scrape_exisitng_team(url_team,players)
-
-games_played = {t["name"]:game_week-1 for t in teams}
-
-prob_lose = {t["name"]:[1/3] for t in teams}
-#prob_lose["Molde"] = []
-#prob_lose["Sarpsborg 08"] = []
-    
-#calculate_expected_score(players,prob_lose,games_played)
-calculate_score(players,game_week-1)
 
 
 not_playing = {}
@@ -94,53 +111,67 @@ not_playing["Odd"] = ["Bakenga"]
 not_playing["Bodø/Glimt"] = ["Sørli"]
 not_playing["Rosenborg"] = ["Zachariassen"]
 not_playing["FK Haugesund"] = ["Desler"]
-not_playing["Vålerenga"] = ["Dønnum"]
+not_playing["Vålerenga"] = ["Dønnum","Borchgrevink"]
 not_playing["Mjøndalen"] = ["Thomas"]
 not_playing["Viking FK"] = ["Haugen","Tripic"]
 not_playing["Stabæk"] = ["Edvardsen"]
+not_playing["Sarpsborg 08"] = ["Koné"]
+not_playing["Tromsø"] = []
 
-for team, out in not_playing.items():
+horizon = 4
+for i in range(horizon):
+
+    home_teams,away_teams,difficulty = ri.scrape_fixtures(url_fix,teams,game_week+i)
+    #calculate_expected_score(players,prob_lose,games_played)
+    calculate_expected_score(players,home_teams,away_teams,game_week-1,i)
     
-    for p in players:
-        if p.team != team:
-            continue
-        if p.name in out:
-            p.score = 0.0
-                
+    if i == 0:
+        for team, out in not_playing.items():
+            
+            for p in players:
+                if p.team != team:
+                    continue
+                if p.name in out:
+                    p.score[0] = 0.0
+                    
 team_worth = bank
 print("Existing players:")
 for p in existing_players:
     p.display()
     team_worth += p.cost
 
-print("")
-print("Bank:",bank)
-print("Total value:",team_worth)
-print("Free transfers:",n_free_transf)
-print("")
-
+wild_card = False
 rik_onkel = False
 spiss_rush = False
 
 
+n_max_transf = 15
+
 if rik_onkel:    
     team_worth = 10000
     n_free_transf = 15
+    n_max_transf = 15
     
+if wild_card:    
+    n_free_transf = 15
+    n_max_transf = 15
+        
 if spiss_rush:
     for p in players:
         if p.position=="fwd":
-            p.score *= 2
+            p.score[0] *= 2
     
+print("")
+print("Bank:",bank)
+print("Total value:",team_worth)
+print("Free transfers:",n_free_transf)
+print("")    
 
 #solver_path = r"C:\Users\Christian\CPLEX 20_10\cplex.exe"
 solver_path = r"C:\My Stuff\CPLEX 20\cplex.exe"
 
-opt = pr.FantasyOptimizer(solver_path)
-opt.build_best_formation_model(players,budget = team_worth)
-opt.add_existing_team(existing_players,n_free_transf=n_free_transf)
-#opt.add_min_team_players("Rosenborg",1)  
-
+opt = pr.MultiWeekFantasyOptimizer(solver_path)
+opt.build_best_formation_model(players,horizon,team_worth,existing_players,n_free_transf,n_max_transf=n_max_transf)
 
 opt.solve_model()
 opt.display_results()

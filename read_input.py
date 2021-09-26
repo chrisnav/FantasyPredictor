@@ -24,7 +24,7 @@ class Player(object):
         else:
             self.real_name = name
         
-        self.score = 0.0        
+        self.score = []     
         self.is_chosen = False
         self.is_cap = False
         self.on_pitch = False
@@ -53,7 +53,7 @@ def scrape_players(url):
 
     #rounds = r["events"]
     teams = r["teams"]
-    
+
     team_code_to_name = {t["code"]:t["name"] for t in teams}
     
     elements = r["elements"] #element_type: 1 = gkp, 2 = def, 3 = mid, 4 = fwd
@@ -80,6 +80,9 @@ def scrape_players(url):
             print(p)        
             continue
         
+        #for k,v in e.items():
+        #    print(k,v)
+        #sys.exit()
         
         player_id = e["id"]
         real_name = e["first_name"]+" "+e["second_name"]
@@ -100,24 +103,46 @@ def scrape_players(url):
     
     return players,teams
     
-def scrape_difficulty_rating(url_fdr,teams):
+def scrape_fixtures(url_fix,teams,week):
 
     team_id_to_name = {t["id"]:t["name"] for t in teams}
 
     difficulty = {t["name"]:[] for t in teams}
+    home_teams = []
+    away_teams = []
     
-    r = req.get(url_fdr)
+    r = req.get(url_fix)
     r = json.loads(r.content)
 
     for match in r:
-        
+        if match["event"] != week:
+            continue     
+            
         home = team_id_to_name[match["team_h"]]
         away = team_id_to_name[match["team_a"]]
+
+        home_teams.append(home)
+        away_teams.append(away)
         
-        difficulty[home].append(match["team_h_difficulty"])
-        difficulty[away].append(match["team_a_difficulty"])    
+        try:
+            fdr_h = match["team_h_difficulty"]
+            fdr_a = match["team_a_difficulty"]
+            
+            if home in difficulty.keys():
+                difficulty[home].append(fdr_h)
+            else:
+                difficulty[home]= [fdr_h]
+            
+            if away in difficulty.keys():
+                difficulty[away].append(fdr_a)
+            else:
+                difficulty[away]= [fdr_a]
+                
+        except KeyError:
+            pass
+
         
-    return difficulty
+    return home_teams,away_teams,difficulty
         
 def scrape_exisitng_team(url_team,players):
 
@@ -163,17 +188,12 @@ def read_linear_scoring_model(file):
         position = int(l[0])
         fdr = int(l[1])
         const = float(l[2])
-        points_last_game = float(l[3])
-        average_points = float(l[4])
-        average_minutes = float(l[5])
-        average_assists = float(l[6])
-        average_goals_conceded = float(l[7])
-        average_clean_sheets = float(l[8])
-        
+        variables = [float(v) for v in l[3:len(l)-1]]
+
         if fdr == -1:
-            linear_model[position] = [const,points_last_game,average_points,average_minutes,average_assists,average_goals_conceded,average_clean_sheets]
+            linear_model[position] = [const] + variables
         else:
-            linear_model[position][fdr] = [const,points_last_game,average_points,average_minutes,average_assists,average_goals_conceded,average_clean_sheets]
+            linear_model[position][fdr] = [const] + variables
         
     return linear_model
         
