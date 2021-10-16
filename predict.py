@@ -521,7 +521,7 @@ class MultiWeekFantasyOptimizer():
             if w == 0:
                 return m.u[w] == 0
                 
-            return 15*m.u[w] >= m.n_changes[w-1] - 1
+            return 15*m.u[w] >= m.n_changes[w-1] #- 1
         model.RemoveFreeChange = Constraint(model.W, rule=remove_free_change_rule)
         
 

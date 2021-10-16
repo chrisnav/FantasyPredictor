@@ -2,9 +2,13 @@ import predict as pr
 import requests as req
 import json
 import sys
+import time
+import copy
+from concurrent.futures import ThreadPoolExecutor
+import threading
 
 class Player(object):
-    def __init__(self,name,cost,form,tot_points,minutes,assists,goals_conceded,clean_sheets,points_last_round,position,team,player_id = -1, real_name = ""):
+    def __init__(self,name,cost,form,tot_points,minutes,assists,goals_conceded,clean_sheets,points_last_round,goals_scored,position,team,player_id = -1, real_name = ""):
         self.name = name
         self.cost = cost
         self.position = position
@@ -16,6 +20,7 @@ class Player(object):
         self.goals_conceded = goals_conceded
         self.clean_sheets = clean_sheets
         self.points_last_round = points_last_round
+        self.goals_scored = goals_scored
 
         self.player_id = player_id
         
@@ -46,8 +51,10 @@ class Player(object):
     def display(self):
         print(f"Player: {self.name}, {self.team}, {self.position}. Cost {self.cost}, Score {self.score}")
 
-def scrape_players(url):    
-       
+def scrape_players(url_base):    
+   
+    url = f"{url_base}bootstrap-static/"
+    
     r = req.get(url)
     r = json.loads(r.content)
 
@@ -96,14 +103,15 @@ def scrape_players(url):
         clean_sheets = int(e["clean_sheets"])
         goals_conceded = int(e["goals_conceded"])
         points_last_round = int(e["event_points"])
+        goals_scored = int(e["goals_scored"])
 
-        p = Player(name,cost,form,tot_points,minutes,assists,goals_conceded,clean_sheets,points_last_round,pos,team,player_id=player_id, real_name=real_name,)
+        p = Player(name,cost,form,tot_points,minutes,assists,goals_conceded,clean_sheets,points_last_round,goals_scored,pos,team,player_id=player_id, real_name=real_name,)
         
         players.append(p)
     
     return players,teams
     
-def scrape_fixtures(url_fix,teams,week):
+def scrape_fixtures(url_base,teams,week):
 
     team_id_to_name = {t["id"]:t["name"] for t in teams}
 
@@ -111,7 +119,8 @@ def scrape_fixtures(url_fix,teams,week):
     home_teams = []
     away_teams = []
     
-    r = req.get(url_fix)
+    url = f"{url_base}fixtures/"
+    r = req.get(url)
     r = json.loads(r.content)
 
     for match in r:
@@ -196,7 +205,134 @@ def read_linear_scoring_model(file):
             linear_model[position][fdr] = [const] + variables
         
     return linear_model
+
+def player_summary_scrape(url_base,player_id,player_history):            
+
+    url = f"{url_base}element-summary/{player_id}/"
+    r = req.get(url)
+    status = r.status_code
+    
+    if status == 404:
+        print("404: Unable to scrape player with id",player_id)
+        return
+    
+    r = json.loads(r.content)
+    
+    player_history[player_id-1] = r["history"]
+    
+    time.sleep(0.1)
+    
+    #fixtures = r['fixtures']
+    #history = r['history']
+    #history_past = r['history_past']     
+
+def create_player_history(url_base,filename,game_week):
+    
+    players,teams = scrape_players(url_base)
+    N_players = len(players)
+
+    player_history = [None for i in range(N_players)]
+
+    t0 = time.time()
+
+    with ThreadPoolExecutor() as threadPool:
+    
+        for player_id in range(1,N_players+1):
+            
+            threadPool.submit(player_summary_scrape,url_base,player_id,player_history)
+
+    with ThreadPoolExecutor() as threadPool:
         
+        for i,val in enumerate(player_history):
+            
+            if val is None:
+                threadPool.submit(player_summary_scrape,url_base,i+1,player_history)
+        
+        
+        
+    t1 = time.time()
+
+        
+    with open(filename,"w") as f:
+
+        for pid,history in enumerate(player_history):
+            
+            info = {}
+            
+            if history is None:
+                print(pid,"is None!")
+                player_summary_scrape(url_base,pid+1,player_history)                
+                history = player_history[pid]
+                
+            for e in history:
+                
+                for key,val in e.items():
+                    
+                    if key in info:
+                        info[key].append(val)
+                    else:
+                        info[key] = [val]
+            
+            rounds = info["round"]
+            try:
+                i = rounds.index(game_week)+1
+            except ValueError:
+                i = len(rounds)
+            
+            for key,vals in info.items():
+                f.write(f"{key};")
+                for v in vals[:i]:
+                    f.write(f"{v};")
+                f.write("\n")    
+                
+            f.write("\n")
+
+    
+def read_player_history(file,players):
+
+    with open(file,"r") as f:
+        lines = [l for l in f]
+        
+    attr_dict = {}
+    for l in lines:
+        
+        if l.count(";") == 0:
+
+            pid = attr_dict["element"][0]
+            p = None
+            for player in players:
+                if player.player_id == pid:
+                    p = player
+                    break
+            
+            if p is None:
+                print("Did not find player with id",pid)
+                sys.exit()
+            
+            p.history = copy.copy(attr_dict)
+            
+            attr_dict = {}
+            continue
+            
+            
+        l = l.split(";")
+        
+        attribute = l[0]
+        
+        if attribute == "was_home" or attribute == "kickoff_time":
+            vals = [v for v in l[1:] if v!="\n" and v != "None"]
+        elif attribute == "round":
+            vals = [int(v) for v in l[1:] if v!="\n" and v != "None"]
+        else:
+            vals = [float(v) for v in l[1:] if v!="\n" and v != "None"]
+        
+        attr_dict[attribute] = vals
+        
+        
+
+    
+
+    
     
 def read_team(team_file,team):
 
