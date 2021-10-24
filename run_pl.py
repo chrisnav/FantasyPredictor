@@ -62,6 +62,9 @@ def calculate_expected_score_new(players,home_teams,away_teams,difficulty,prev_g
         else:
             print("Unknown position",p.position)
         
+        if pos != 2:
+            continue
+
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
         
@@ -124,9 +127,9 @@ def calculate_expected_score_new(players,home_teams,away_teams,difficulty,prev_g
         
         p.score.append(score)
 
-def calculate_expected_score_points_model(players,home_teams,away_teams,prev_game_week,future_week):
+def calculate_expected_score_points_model(players,home_teams,away_teams,difficulty,prev_game_week,future_week):
               
-    lin_model = ri.read_linear_scoring_model("simple_points_model.txt")
+    lin_model = ri.read_linear_scoring_model("fdr_points_model.txt")
     diff = []
     for p in players:
     
@@ -141,14 +144,19 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,prev_gam
         else:
             print("Unknown position",p.position)
 
+        if pos == 2:
+            continue
+
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
         
         if n_home + n_away == 0:        
             p.score.append(0.0)
             continue
-            
-        mod = lin_model[pos]
+        
+        fdr = difficulty[p.team][0]
+
+        mod = lin_model[pos][fdr]
           
         average_points = (p.tot_points + sum(p.score))/(prev_game_week+future_week)
         if len(p.score) == 0:
@@ -179,7 +187,7 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,prev_gam
 
         p.score.append(score)
         
-game_week = 8
+game_week = 9
     
 url_base = "https://fantasy.premierleague.com/api/"
     
@@ -200,15 +208,15 @@ not_playing = {}
 #not_playing["Spurs"] = ["Son"]
 #not_playing["Liverpool"] = ["Alexander-Arnold"]
 #not_playing["Aston Villa"] = ["Watkins","Davis"]
-#not_playing["Everton"] = ["Delph"]
+not_playing["Everton"] = ["Doucouré"]
 #not_playing["Leicester"] = ["Mendy"]
 
-horizon = 4
+horizon = 3
 for i in range(horizon):
     home_teams,away_teams,difficulty = ri.scrape_fixtures(url_base,teams,game_week+i)
     #calculate_expected_score(players,home_teams,away_teams,difficulty,game_week-1,i)    
-    #calculate_expected_score_new(players,home_teams,away_teams,difficulty,game_week-1,i)
-    calculate_expected_score_points_model(players,home_teams,away_teams,game_week-1,i)
+    calculate_expected_score_new(players,home_teams,away_teams,difficulty,game_week-1,i)
+    calculate_expected_score_points_model(players,home_teams,away_teams,difficulty,game_week-1,i)
     
     if i == 0:
         for p in players:

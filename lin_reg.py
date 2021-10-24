@@ -519,6 +519,9 @@ def create_fdr_points_model(players,save=False):
     form_3 = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
     form_4 = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
 
+    form_std = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
+    form_max = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
+    
     form_inf = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
     score = {j:{i:[] for i in range(1,5)} for j in range(2,6)}
 
@@ -535,6 +538,9 @@ def create_fdr_points_model(players,save=False):
             form_3[fdr][pos].append(np.mean(p["points"][i-3]))            
             form_4[fdr][pos].append(np.mean(p["points"][i-4]))            
             form_inf[fdr][pos].append(np.mean(p["points"][:i]))            
+            
+            form_max[fdr][pos].append(np.amax(p["points"][:i]))            
+            form_std[fdr][pos].append(np.std(p["points"][:i]))            
 
 
             score[fdr][pos].append(p["points"][i])
@@ -542,7 +548,7 @@ def create_fdr_points_model(players,save=False):
     print("")
 
     fitted_model = {}
-    var_names = ["points_1","points_2","points_inf","points_1_sqrd","points_2_sqrd","points_inf_sqrd"]
+    var_names = ["points_1","points_2","points_inf","points_1_sqrd","points_2_sqrd","points_inf_sqrd","points_max","points_std"]
 
     for i in range(1,5):
         
@@ -564,7 +570,11 @@ def create_fdr_points_model(players,save=False):
             all_x.append(np.array(form_1[j][i])**2)
             all_x.append(np.array(form_2[j][i])**2)       
             all_x.append(np.array(form_inf[j][i])**2)
-            
+
+            all_x.append(np.array(form_max[j][i]))
+            all_x.append(np.array(form_std[j][i]))
+
+
             x = np.array(all_x).T             
             
             #x = sm.add_constant(x)
@@ -612,23 +622,22 @@ def create_fdr_points_model(players,save=False):
 
             fitted_model[i][j] = coeffs
             
-            #k = 1
-            #for m in range(len(all_x)):
-            #    if m+1 in worst:
-            #        print(f"x{m+1} not part of fit")
-            #        continue           
-            #        
-            #    fig = plt.figure(figsize=(12,8))
-            #    fig = sm.graphics.plot_regress_exog(fit, f'x{k}', fig=fig)
-            #    plt.show()        
-            #    k += 1        
-        
-        
+            k = 1
+            for m in range(len(all_x)):
+                if m+1 in worst:
+                    print(f"x{m+1} not part of fit")
+                    continue           
+                    
+                fig = plt.figure(figsize=(12,8))
+                fig = sm.graphics.plot_regress_exog(fit, f'x{k}', fig=fig)
+                plt.show()        
+                k += 1        
+                
         
         print("")
     
     if save:
-        with open("fdr_average_linear_model.txt","w") as f:
+        with open("fdr_points_model.txt","w") as f:
             
             f.write("Position;FDR;")
             for name in var_names:
@@ -642,8 +651,7 @@ def create_fdr_points_model(players,save=False):
                         f.write(str(c)+";")
                     f.write("\n")
 
-
-def create_average_simple_model(players,save=False):
+def create_simple_points_model(players,save=False):
 
     form_1 = {i:[] for i in range(1,5)}
     form_2 = {i:[] for i in range(1,5)}
@@ -1051,6 +1059,7 @@ for i,season in enumerate(seasons):
 #create_average_fdr_model(players,save=True)
 
 create_fdr_points_model(players,save=False)
+
 
 #create_average_simple_model(players,save=True)
 #create_big_simple_model(players,save=True)    

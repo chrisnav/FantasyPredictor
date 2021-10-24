@@ -71,6 +71,9 @@ def calculate_expected_score_big_model(players,home_teams,away_teams,prev_game_w
             pos = 4       
         else:
             print("Unknown position",p.position)
+        
+        if pos != 2:
+            continue
 
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
@@ -140,6 +143,9 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,prev_gam
             pos = 4       
         else:
             print("Unknown position",p.position)
+        
+        if pos == 2:
+            continue
 
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
@@ -179,7 +185,7 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,prev_gam
         p.score.append(score)
 
             
-game_week = 22
+game_week = 23
 
 url_base = "https://fantasy.eliteserien.no/api/"     
 
@@ -208,13 +214,13 @@ not_playing["Stabæk"] = []
 not_playing["Sarpsborg 08"] = []
 not_playing["Tromsø"] = []
 
-horizon = 4
+horizon = 3
 for i in range(horizon):
 
     home_teams,away_teams,difficulty = ri.scrape_fixtures(url_base,teams,game_week+i)
 
     #calculate_expected_score_average_model(players,home_teams,away_teams,game_week-1,i)
-    #calculate_expected_score_big_model(players,home_teams,away_teams,game_week-1,i)
+    calculate_expected_score_big_model(players,home_teams,away_teams,game_week-1,i)
     calculate_expected_score_points_model(players,home_teams,away_teams,game_week-1,i)
     
 #    if i == 0:
