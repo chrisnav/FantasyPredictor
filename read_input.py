@@ -206,7 +206,7 @@ def read_linear_scoring_model(file):
         
     return linear_model
 
-def player_summary_scrape(url_base,player_id,player_history):            
+def player_summary_scrape(url_base,player_id,player_history,wait_time=0.1):            
 
     url = f"{url_base}element-summary/{player_id}/"
     r = req.get(url)
@@ -220,16 +220,19 @@ def player_summary_scrape(url_base,player_id,player_history):
     
     player_history[player_id-1] = r["history"]
     
-    time.sleep(0.1)
+    time.sleep(wait_time)
     
     #fixtures = r['fixtures']
     #history = r['history']
     #history_past = r['history_past']     
 
-def create_player_history(url_base,filename,game_week):
+def create_player_history(url_base,filename,game_week,wait_time=0.1):
     
     players,teams = scrape_players(url_base)
     N_players = len(players)
+
+    team_id_to_name = {t["id"]:t["name"] for t in teams}
+
 
     player_history = [None for i in range(N_players)]
 
@@ -239,21 +242,21 @@ def create_player_history(url_base,filename,game_week):
     
         for player_id in range(1,N_players+1):
             
-            threadPool.submit(player_summary_scrape,url_base,player_id,player_history)
+            threadPool.submit(player_summary_scrape,url_base,player_id,player_history,wait_time=wait_time)
 
     with ThreadPoolExecutor() as threadPool:
         
         for i,val in enumerate(player_history):
             
             if val is None:
-                threadPool.submit(player_summary_scrape,url_base,i+1,player_history)
+                threadPool.submit(player_summary_scrape,url_base,i+1,player_history,wait_time=wait_time)
         
         
         
     t1 = time.time()
 
         
-    with open(filename,"w") as f:
+    with open(filename,"w",encoding="utf8") as f:
 
         for pid,history in enumerate(player_history):
             
@@ -278,7 +281,13 @@ def create_player_history(url_base,filename,game_week):
                 i = rounds.index(game_week)+1
             except ValueError:
                 i = len(rounds)
+
+            info["opponent_team"] = [team_id_to_name[j] for j in  info["opponent_team"]]                
             
+            f.write(f"name;{players[pid].name};\n")
+            f.write(f"position;{players[pid].position};\n")
+            f.write(f"team;{players[pid].team};\n")
+
             for key,vals in info.items():
                 f.write(f"{key};")
                 for v in vals[:i]:
@@ -319,6 +328,9 @@ def read_player_history(file,players):
         
         attribute = l[0]
         
+        if attribute in ["name","position","team"]:
+            continue
+
         if attribute == "was_home" or attribute == "kickoff_time":
             vals = [v for v in l[1:] if v!="\n" and v != "None"]
         elif attribute == "round":

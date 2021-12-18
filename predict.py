@@ -372,7 +372,7 @@ class MultiWeekFantasyOptimizer():
         
         model = ConcreteModel()
                 
-        model.W = RangeSet(0,n_weeks-1)                                                        #Time index
+        model.W = RangeSet(0,n_weeks-1)                                                             #Time index
         model.I = RangeSet(0,len(self.players)-1)                                                   #Player index
         model.I_gkp = Set(initialize=[i for i,p in enumerate(self.players) if p.position=="gkp"])   #Goalkeeper index
         model.I_def = Set(initialize=[i for i,p in enumerate(self.players) if p.position=="def"])   #Defender index
@@ -416,6 +416,10 @@ class MultiWeekFantasyOptimizer():
         def init_score(m,i,w):
             return self.players[i].score[w]
         model.Score = Param(model.I,model.W,initialize=init_score)
+
+        def init_weight(m,w):
+            return 0.5**w
+        model.Weight = Param(model.W,initialize=init_weight)        
         
         def init_existing_team(m,i):
             p = self.players[i]
@@ -527,12 +531,13 @@ class MultiWeekFantasyOptimizer():
 
         
         def objective_rule(m):
-            cap_score = sum(m.Score[i,w]*m.cap[i,w] for i in m.I for w in m.W)
-            form_score = sum(m.form_points[j,w] for j in m.J for w in m.W)       
-            bench_score = sum(m.Score[i,w]*(m.in_squad[i,w]-m.on_pitch[i,j,w]) for i in m.I for j in m.J for w in m.W)/len(m.J)
+            cap_score = sum(m.Weight[w]*m.Score[i,w]*m.cap[i,w] for i in m.I for w in m.W)
+            form_score = sum(m.Weight[w]*m.form_points[j,w] for j in m.J for w in m.W)       
+            bench_score = sum(m.Weight[w]*m.Score[i,w]*(m.in_squad[i,w]-m.on_pitch[i,j,w]) for i in m.I for j in m.J for w in m.W)/len(m.J)
+            change_ramping = sum(m.n_changes[w] for w in m.W)/len(m.W)
             #smoothing_score = 0.05*sum(m.Score[i]*m.in_squad[i] for i in m.I)/15
                    
-            return cap_score + 0.99*form_score + 0.01*bench_score - 4*sum(m.n_costly[w] for w in m.W)
+            return cap_score + 0.99*form_score + 0.01*bench_score - 4*sum(m.n_costly[w] for w in m.W) - 0.1*change_ramping
         model.OBJ = Objective(rule=objective_rule,sense=maximize)        
 
         self.model = model          

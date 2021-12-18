@@ -62,8 +62,8 @@ def calculate_expected_score_new(players,home_teams,away_teams,difficulty,prev_g
         else:
             print("Unknown position",p.position)
         
-        if pos != 2:
-            continue
+        #if "Salah" not in p.name:
+        #    continue
 
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
@@ -127,7 +127,7 @@ def calculate_expected_score_new(players,home_teams,away_teams,difficulty,prev_g
         
         p.score.append(score)
 
-def calculate_expected_score_points_model(players,home_teams,away_teams,difficulty,prev_game_week,future_week):
+def calculate_expected_score_points_model(players,home_teams,away_teams,difficulty):
               
     lin_model = ri.read_linear_scoring_model("fdr_points_model.txt")
     diff = []
@@ -144,50 +144,43 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,difficul
         else:
             print("Unknown position",p.position)
 
-        if pos == 2:
+        #if pos == 2:
+        #    continue
+        try:
+            fdr = difficulty[p.team][0]
+        except IndexError:
+            p.score.append(0.0)
             continue
-
+        
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
         
         if n_home + n_away == 0:        
             p.score.append(0.0)
             continue
-        
-        fdr = difficulty[p.team][0]
+            
+        mod = lin_model[pos]
 
-        mod = lin_model[pos][fdr]
-          
-        average_points = (p.tot_points + sum(p.score))/(prev_game_week+future_week)
-        if len(p.score) == 0:
-            prev_points = p.history["total_points"][-1]
-            try:
-                prev_points_2 = p.history["total_points"][-2]
-            except IndexError:
-                prev_points_2 = 0
-            
-        elif len(p.score) == 1:
-            prev_points = p.score[-1]
-            prev_points_2 = p.history["total_points"][-1]
+        prev_points = list(p.history["total_points"])+list(p.score)
+        n = len(prev_points)
+
+        if n < 4:
+            prev_points = [0]*(4-n)+prev_points
         else:
-            prev_points = p.score[-1]
-            prev_points_2 = p.score[-2]
-            
+            prev_points = prev_points[n-4:]
 
         score = 0.0
         for i in range(n_home):
 
-            vals = [prev_points,prev_points_2,average_points,prev_points**2,prev_points_2**2,average_points**2]
-            score += sum(v*c for v,c in zip(vals,mod))     
+            score += sum(v*c for v,c in zip(prev_points+[3.5-fdr],mod))     
             
         for i in range(n_away):
 
-            vals = [prev_points,prev_points_2,average_points,prev_points**2,prev_points_2**2,average_points**2]
-            score += sum(v*c for v,c in zip(vals,mod))     
-
+            score += sum(v*c for v,c in zip(prev_points+[3.5-fdr],mod)) 
+    
         p.score.append(score)
         
-game_week = 9
+game_week = 18
     
 url_base = "https://fantasy.premierleague.com/api/"
     
@@ -205,23 +198,27 @@ except FileNotFoundError:
     ri.read_player_history(filename_history,players)
 
 not_playing = {}
-#not_playing["Spurs"] = ["Son"]
-#not_playing["Liverpool"] = ["Alexander-Arnold"]
-#not_playing["Aston Villa"] = ["Watkins","Davis"]
-not_playing["Everton"] = ["Doucouré"]
-#not_playing["Leicester"] = ["Mendy"]
+#not_playing["Chelsea"] = ["Chalobah"]
+#not_playing["Man City"] = ["Cancelo"]
+#not_playing["Brighton"] = ["Duffy"]
+#not_playing["Spurs"] = ["Reguilón"]
+#not_playing["Liverpool"] = ["Firmino"]Reguilón
+#not_playing["Wolves"] = ["Marçal"]
+#not_playing["Everton"] = ["Doucouré"]
+#not_playing["Leicester"] = ["Tielemans"]
+#not_playing["Watford"] = ["Dennis"]
 
 horizon = 3
 for i in range(horizon):
     home_teams,away_teams,difficulty = ri.scrape_fixtures(url_base,teams,game_week+i)
     #calculate_expected_score(players,home_teams,away_teams,difficulty,game_week-1,i)    
-    calculate_expected_score_new(players,home_teams,away_teams,difficulty,game_week-1,i)
-    calculate_expected_score_points_model(players,home_teams,away_teams,difficulty,game_week-1,i)
+    #calculate_expected_score_new(players,home_teams,away_teams,difficulty,game_week-1,i)
+    calculate_expected_score_points_model(players,home_teams,away_teams,difficulty)
     
     if i == 0:
         for p in players:
             if p.team in not_playing and p.name in not_playing[p.team]:
-                p.score[0] = 0.0
+                p.score[i] = 0.0
             
 team_worth = bank
 for p in existing_players:

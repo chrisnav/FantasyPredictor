@@ -72,8 +72,8 @@ def calculate_expected_score_big_model(players,home_teams,away_teams,prev_game_w
         else:
             print("Unknown position",p.position)
         
-        if pos != 2:
-            continue
+        #if pos != 2:
+        #    continue
 
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
@@ -127,7 +127,7 @@ def calculate_expected_score_big_model(players,home_teams,away_teams,prev_game_w
 
         p.score.append(score)
 
-def calculate_expected_score_points_model(players,home_teams,away_teams,prev_game_week,future_week):
+def calculate_expected_score_points_model(players,home_teams,away_teams):
               
     lin_model = ri.read_linear_scoring_model("simple_points_model.txt")
     diff = []
@@ -144,8 +144,6 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,prev_gam
         else:
             print("Unknown position",p.position)
         
-        if pos == 2:
-            continue
 
         n_home = home_teams.count(p.team)
         n_away = away_teams.count(p.team)
@@ -155,37 +153,32 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,prev_gam
             continue
             
         mod = lin_model[pos]
-          
-        average_points = (p.tot_points + sum(p.score))/(prev_game_week+future_week)
-        if len(p.score) == 0:
-            prev_points = p.history["total_points"][-1]
-            try:
-                prev_points_2 = p.history["total_points"][-2]
-            except IndexError:
-                prev_points_2 = 0
-            
-        elif len(p.score) == 1:
-            prev_points = p.score[-1]
-            prev_points_2 = p.history["total_points"][-1]
+
+        prev_points = list(p.history["total_points"])+list(p.score)        
+        n = len(prev_points)
+
+        average = np.mean(prev_points)
+
+        if n < 4:
+            prev_points = [0]*(4-n)+prev_points
         else:
-            prev_points = p.score[-1]
-            prev_points_2 = p.score[-2]
-        
+            prev_points = prev_points[n-4:]
+
+        coeffs = prev_points+[average]
+
         score = 0.0
         for i in range(n_home):
 
-            vals = [prev_points,prev_points_2,average_points,prev_points**2,prev_points_2**2,average_points**2]
-            score += sum(v*c for v,c in zip(vals,mod))     
+            score += sum(v*c for v,c in zip(coeffs,mod))     
             
         for i in range(n_away):
 
-            vals = [prev_points,prev_points_2,average_points,prev_points**2,prev_points_2**2,average_points**2]
-            score += sum(v*c for v,c in zip(vals,mod))     
+            score += sum(v*c for v,c in zip(coeffs,mod))     
 
         p.score.append(score)
 
             
-game_week = 23
+game_week = 31
 
 url_base = "https://fantasy.eliteserien.no/api/"     
 
@@ -199,38 +192,46 @@ filename_history = f"eliteserien\\2021\\player_history_el_{game_week-1}.txt"
 try:
     ri.read_player_history(filename_history,players)
 except FileNotFoundError:
-    ri.create_player_history(url_base,filename_history,game_week-1)
+    ri.create_player_history(url_base,filename_history,game_week-1,wait_time=0.4)
     ri.read_player_history(filename_history,players)
 
 not_playing = {}
-not_playing["Odd"] = ["Bakenga"]
-not_playing["Bodø/Glimt"] = ["Sørli","Saltnes"]
-not_playing["Rosenborg"] = ["Andersson"]
-not_playing["FK Haugesund"] = ["Desler"]
-not_playing["Vålerenga"] = ["Dønnum","Borchgrevink"]
-not_playing["Mjøndalen"] = ["Thomas"]
-not_playing["Viking FK"] = ["Haugen"]
-not_playing["Stabæk"] = []
-not_playing["Sarpsborg 08"] = []
-not_playing["Tromsø"] = []
+not_playing["Odd"] = ["Jonassen"]
+#not_playing["Bodø/Glimt"] = ["Vetlesen"]
+#not_playing["Rosenborg"] = ["Andersson"]
+#not_playing["FK Haugesund"] = ["Desler"]
+#not_playing["Vålerenga"] = ["Dønnum","Borchgrevink"]
+#not_playing["Mjøndalen"] = ["Thomas"]
+#not_playing["Viking FK"] = ["Haugen"]
+#not_playing["Stabæk"] = []
+#not_playing["Sarpsborg 08"] = []
+not_playing["Molde"] = ["Sinyan"]
+not_playing["Tromsø"] = ["Totland"]
+not_playing["Lillestrøm"] = ["Pettersson"]
+not_playing["Kristiansund BK"] = ["Strand Nilsen"]
+#not_playing["Strømsgodset"] = ["Myhra"]
+#not_playing["Sandefjord"] = ["Jónsson"]
 
-horizon = 3
+
+
+
+horizon = 1
 for i in range(horizon):
 
     home_teams,away_teams,difficulty = ri.scrape_fixtures(url_base,teams,game_week+i)
 
     #calculate_expected_score_average_model(players,home_teams,away_teams,game_week-1,i)
-    calculate_expected_score_big_model(players,home_teams,away_teams,game_week-1,i)
-    calculate_expected_score_points_model(players,home_teams,away_teams,game_week-1,i)
+    #calculate_expected_score_big_model(players,home_teams,away_teams,game_week-1,i)
+    calculate_expected_score_points_model(players,home_teams,away_teams)
     
-#    if i == 0:
-    for team, out in not_playing.items():
-        
-        for p in players:
-            if p.team != team:
-                continue
-            if p.name in out:
-                p.score[i] = 0.0
+    if i == 0:
+        for team, out in not_playing.items():
+            
+            for p in players:
+                if p.team != team:
+                    continue
+                if p.name in out:
+                    p.score[i] = 0.0
 
 team_worth = bank
 print("Existing players:")

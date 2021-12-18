@@ -7,15 +7,30 @@ import matplotlib.pyplot as plt
 import numpy as np
 import read_input as ri
 
+
 def elo_scrape():
 
-    url = "http://clubelo.com/Lillestrom"
+    url = "http://api.clubelo.com/2021-10-29"
     t = time.time()
     r = req.get(url)
-    print(r.content)
+    info = r.text.split("\n")
+
+    for club in info[1:]:
+        if len(club) == 0:
+            continue
+        club = club.split(",")
+        name = club[1]
+        country_code = club[2]
+        elo = float(club[4])
+
+        if country_code == "NOR":
+
+            print(name,country_code,elo)
+
     print(time.time()-t)
 
-
+elo_scrape()
+sys.exit()
 
 def player_summary_scrape(url_base,player_id,player_history):            
 
