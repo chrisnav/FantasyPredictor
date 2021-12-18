@@ -1,8 +1,0 @@
-Viking FK,Stabæk,1.55,4.4,5.0
-Sandefjord,Bodø/Glimt,4.9,4.0,1.6
-Molde,Strømsgodset,1.25,5.9,9.2
-Tromsø,Kristiansund BK,2.3,3.25,3.0
-Rosenborg,FK Haugesund,1.8,3.65,4.20
-Brann,Lillestrøm,2.4,3.25,2.85
-Mjøndalen,Odd,2.45,3.25,2.75
-Vålerenga,Sarpsborg 08,1.5,4.1,6.0

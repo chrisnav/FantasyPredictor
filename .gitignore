@@ -131,3 +131,4 @@ premier_league/statistics/
 scrape_testing.py
 *.png
 benchmark_score.py
+premier_league/2021_2022/player_history_pl_*.txt

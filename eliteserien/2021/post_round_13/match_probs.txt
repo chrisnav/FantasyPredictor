@@ -1,9 +1,0 @@
-FK Haugesund,Strømsgodset,	3.0,3.0,3.0
-Lillestrøm,Sarpsborg 08,	3.0,3.0,3.0
-Mjøndalen,Stabæk,			3.0,3.0,3.0
-Odd,Sandefjord,				3.0,3.0,3.0
-Mjøndalen,Tromsø,			3.0,3.0,3.0	
-Molde,FK Haugesund,			3.0,3.0,3.0
-Sandefjord,Lillestrøm,		3.0,3.0,3.0
-Viking FK,Kristiansund BK,	3.0,3.0,3.0
-Stabæk,Sarpsborg 08,		3.0,3.0,3.0
