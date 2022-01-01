@@ -328,7 +328,7 @@ def read_player_history(file,players):
         
         attribute = l[0]
         
-        if attribute in ["name","position","team"]:
+        if attribute in ["name","position","team","opponent_team"]:
             continue
 
         if attribute == "was_home" or attribute == "kickoff_time":
