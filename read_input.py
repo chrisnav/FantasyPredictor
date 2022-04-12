@@ -7,7 +7,8 @@ import copy
 from concurrent.futures import ThreadPoolExecutor
 import threading
 
-class Player(object):
+class Player():
+    
     def __init__(self,name,cost,form,tot_points,minutes,assists,goals_conceded,clean_sheets,points_last_round,goals_scored,position,team,player_id = -1, real_name = ""):
         self.name = name
         self.cost = cost
@@ -275,7 +276,14 @@ def create_player_history(url_base,filename,game_week,wait_time=0.1):
                         info[key].append(val)
                     else:
                         info[key] = [val]
-            
+
+            if len(info) == 0:
+                print(history)
+                print(pid)
+                print(players[pid].display())
+                continue
+
+
             rounds = info["round"]
             try:
                 i = rounds.index(game_week)+1

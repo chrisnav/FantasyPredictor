@@ -177,26 +177,44 @@ def calculate_expected_score_points_model(players,home_teams,away_teams):
 
         p.score.append(score)
 
+def calculate_expected_score_from_form(players,home_teams,away_teams):
+              
+    for p in players:       
+
+        n_home = home_teams.count(p.team)
+        n_away = away_teams.count(p.team)
+        
+        if n_home + n_away == 0:        
+            p.score.append(0.0)
+            continue            
+
+        prev_points = list(p.history["total_points"])+list(p.score)        
+        n = len(prev_points)
+
+        average = np.mean(prev_points)
+
+        score = 0.9*average * (n_home+0.9*n_away)
+        p.score.append(score)
             
-game_week = 31
+game_week = 2
 
 url_base = "https://fantasy.eliteserien.no/api/"     
 
-url_team = f"{url_base}entry/29209/event/{game_week-1}/picks/"
+url_team = f"{url_base}entry/9438/event/{game_week-1}/picks/"
 
 players,teams = ri.scrape_players(url_base)
 existing_players,bank,n_free_transf = ri.scrape_exisitng_team(url_team,players)
 
-filename_history = f"eliteserien\\2021\\player_history_el_{game_week-1}.txt"
+filename_history = f"eliteserien\\2022\\player_history_el_{game_week-1}.txt"
 
 try:
     ri.read_player_history(filename_history,players)
 except FileNotFoundError:
-    ri.create_player_history(url_base,filename_history,game_week-1,wait_time=0.4)
+    ri.create_player_history(url_base,filename_history,game_week-1,wait_time=0.6)
     ri.read_player_history(filename_history,players)
 
 not_playing = {}
-not_playing["Odd"] = ["Jonassen"]
+#not_playing["Odd"] = ["Jonassen"]
 #not_playing["Bodø/Glimt"] = ["Vetlesen"]
 #not_playing["Rosenborg"] = ["Andersson"]
 #not_playing["FK Haugesund"] = ["Desler"]
@@ -205,15 +223,12 @@ not_playing["Odd"] = ["Jonassen"]
 #not_playing["Viking FK"] = ["Haugen"]
 #not_playing["Stabæk"] = []
 #not_playing["Sarpsborg 08"] = []
-not_playing["Molde"] = ["Sinyan"]
-not_playing["Tromsø"] = ["Totland"]
-not_playing["Lillestrøm"] = ["Pettersson"]
-not_playing["Kristiansund BK"] = ["Strand Nilsen"]
+not_playing["Molde"] = ["Linnes"]
+#not_playing["Tromsø"] = ["Totland"]
+#not_playing["Lillestrøm"] = ["Pettersson"]
+#not_playing["Kristiansund BK"] = ["Strand Nilsen"]
 #not_playing["Strømsgodset"] = ["Myhra"]
 #not_playing["Sandefjord"] = ["Jónsson"]
-
-
-
 
 horizon = 1
 for i in range(horizon):
@@ -222,8 +237,9 @@ for i in range(horizon):
 
     #calculate_expected_score_average_model(players,home_teams,away_teams,game_week-1,i)
     #calculate_expected_score_big_model(players,home_teams,away_teams,game_week-1,i)
-    calculate_expected_score_points_model(players,home_teams,away_teams)
-    
+    #calculate_expected_score_points_model(players,home_teams,away_teams)
+    calculate_expected_score_from_form(players,home_teams,away_teams)
+
     if i == 0:
         for team, out in not_playing.items():
             
@@ -250,7 +266,8 @@ rik_onkel = False
 spiss_rush = False
 
 
-n_max_transf = 15
+n_max_transf = 2
+n_free_transf = 1
 
 if rik_onkel:    
     team_worth = 10000

@@ -130,8 +130,9 @@ def calculate_expected_score_new(players,home_teams,away_teams,difficulty,prev_g
 def calculate_expected_score_points_model(players,home_teams,away_teams,difficulty):
               
     lin_model = ri.read_linear_scoring_model("fdr_points_model.txt")
-    diff = []
     for p in players:
+
+
     
         if p.position == "gkp":
             pos = 1
@@ -161,7 +162,12 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,difficul
             
         mod = lin_model[pos]
 
-        prev_points = list(p.history["total_points"])+list(p.score)
+        try:
+            prev_points = list(p.history["total_points"])+list(p.score)
+        except AttributeError:
+            print(f"No history found for {p.display()}")
+            prev_points = []
+
         n = len(prev_points)
 
         if n < 4:
@@ -180,7 +186,7 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,difficul
     
         p.score.append(score)
         
-game_week = 18
+game_week = 32
     
 url_base = "https://fantasy.premierleague.com/api/"
     
@@ -194,7 +200,7 @@ filename_history = f"premier_league\\2021_2022\\player_history_pl_{game_week-1}.
 try:
     ri.read_player_history(filename_history,players)
 except FileNotFoundError:
-    ri.create_player_history(url_base,filename_history,game_week-1)
+    ri.create_player_history(url_base,filename_history,game_week-1,wait_time=0.5)
     ri.read_player_history(filename_history,players)
 
 not_playing = {}
@@ -202,23 +208,26 @@ not_playing = {}
 #not_playing["Man City"] = ["Cancelo"]
 #not_playing["Brighton"] = ["Duffy"]
 #not_playing["Spurs"] = ["Reguilón"]
-#not_playing["Liverpool"] = ["Firmino"]Reguilón
+#not_playing["Liverpool"] = ["Alexander-Arnold"]
 #not_playing["Wolves"] = ["Marçal"]
 #not_playing["Everton"] = ["Doucouré"]
 #not_playing["Leicester"] = ["Tielemans"]
 #not_playing["Watford"] = ["Dennis"]
+#not_playing["Man Utd"] = ["Fernandes"]
+#not_playing["West Ham"] = ["Bowen"]
+not_playing["Arsenal"] = ["Tierney"]
 
-horizon = 3
+horizon = 1
 for i in range(horizon):
     home_teams,away_teams,difficulty = ri.scrape_fixtures(url_base,teams,game_week+i)
     #calculate_expected_score(players,home_teams,away_teams,difficulty,game_week-1,i)    
     #calculate_expected_score_new(players,home_teams,away_teams,difficulty,game_week-1,i)
     calculate_expected_score_points_model(players,home_teams,away_teams,difficulty)
     
-    if i == 0:
-        for p in players:
-            if p.team in not_playing and p.name in not_playing[p.team]:
-                p.score[i] = 0.0
+    #if i == 0:
+    for p in players:
+        if p.team in not_playing and p.name in not_playing[p.team]:
+            p.score[i] = 0.0
             
 team_worth = bank
 for p in existing_players:
