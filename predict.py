@@ -552,10 +552,10 @@ class MultiWeekFantasyOptimizer():
                              for j in m.J for w in m.W)
             bench_score = sum(m.Weight[w]*m.Score[i, w]*(m.in_squad[i, w]-m.on_pitch[i, j, w])
                               for i in m.I for j in m.J for w in m.W)/len(m.J)
-            change_ramping = sum(m.n_changes[w] for w in m.W)/len(m.W)
+            #change_ramping = sum(m.n_changes[w] for w in m.W)/len(m.W)
             #smoothing_score = 0.05*sum(m.Score[i]*m.in_squad[i] for i in m.I)/15
 
-            return cap_score + 0.99*form_score + 0.01*bench_score - 4*sum(m.n_costly[w] for w in m.W) - 0.1*change_ramping
+            return cap_score + 0.99*form_score + 0.01*bench_score - 4*sum(m.n_costly[w] for w in m.W) #- 0.0*change_ramping
         model.OBJ = Objective(rule=objective_rule, sense=maximize)
 
         self.model = model

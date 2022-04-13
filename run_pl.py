@@ -186,7 +186,56 @@ def calculate_expected_score_points_model(players,home_teams,away_teams,difficul
     
         p.score.append(score)
         
-game_week = 32
+def calculate_smart_score(players,home_teams,away_teams):
+
+    from sklearn.linear_model import LinearRegression
+    from skforecast.ForecasterAutoreg import ForecasterAutoreg
+    import pandas as pd
+
+    forecaster = ForecasterAutoreg(regressor = LinearRegression(), lags = 4)
+
+    for p in players:
+
+        n_home = home_teams.count(p.team)
+        n_away = away_teams.count(p.team)
+        n_matches = n_home+n_away
+
+        if n_matches == 0:        
+            p.score.append(0.0)
+            continue
+
+        try:
+            prev_points = list(p.history["total_points"])+list(p.score)
+            minutes_played = list(p.history["minutes"])
+        except AttributeError:
+            print(f"No history found for {p.display()}")
+            p.score.append(0.0)
+            continue
+        
+        minute_factor = 1.0
+        if np.mean(minutes_played[-2:]) < 60.0:
+            minute_factor = 0.5
+
+        if len(prev_points) <= 4:
+            p.score.append(np.mean(prev_points)*n_matches*minute_factor)
+            continue
+        
+        average = np.mean(prev_points[-4:])
+
+        forecaster.fit(y=pd.Series(prev_points))
+        try:
+            prediction = forecaster.predict(steps=1).values[0]
+        except IndexError:
+            print(f"Unable to fit data for {p.display()}")
+            prediction = average
+
+        sc = min(average,prediction)
+        if sc < 0.0:
+            sc = max(average,prediction)
+
+        p.score.append(sc*n_matches*minute_factor)
+
+game_week = 33
     
 url_base = "https://fantasy.premierleague.com/api/"
     
@@ -213,17 +262,19 @@ not_playing = {}
 #not_playing["Everton"] = ["Doucouré"]
 #not_playing["Leicester"] = ["Tielemans"]
 #not_playing["Watford"] = ["Dennis"]
-#not_playing["Man Utd"] = ["Fernandes"]
+not_playing["Man Utd"] = ["Fred"]
 #not_playing["West Ham"] = ["Bowen"]
 not_playing["Arsenal"] = ["Tierney"]
 
 horizon = 1
+
 for i in range(horizon):
     home_teams,away_teams,difficulty = ri.scrape_fixtures(url_base,teams,game_week+i)
     #calculate_expected_score(players,home_teams,away_teams,difficulty,game_week-1,i)    
     #calculate_expected_score_new(players,home_teams,away_teams,difficulty,game_week-1,i)
-    calculate_expected_score_points_model(players,home_teams,away_teams,difficulty)
-    
+    #calculate_expected_score_points_model(players,home_teams,away_teams,difficulty)
+    calculate_smart_score(players,home_teams,away_teams)
+
     #if i == 0:
     for p in players:
         if p.team in not_playing and p.name in not_playing[p.team]:
@@ -246,7 +297,7 @@ print("")
 n_max_transf = 15
 
 bench_boost = False
-wild_card = False
+wild_card = True
 
 if wild_card:    
     n_free_transf = 15
