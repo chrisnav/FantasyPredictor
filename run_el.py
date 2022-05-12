@@ -196,7 +196,56 @@ def calculate_expected_score_from_form(players,home_teams,away_teams):
         score = 0.9*average * (n_home+0.9*n_away)
         p.score.append(score)
             
-game_week = 2
+def calculate_smart_score(players,home_teams,away_teams):
+
+    from sklearn.linear_model import LinearRegression
+    from skforecast.ForecasterAutoreg import ForecasterAutoreg
+    import pandas as pd
+
+    forecaster = ForecasterAutoreg(regressor = LinearRegression(), lags = 4)
+
+    for p in players:
+
+        n_home = home_teams.count(p.team)
+        n_away = away_teams.count(p.team)
+        n_matches = n_home+n_away
+
+        if n_matches == 0:        
+            p.score.append(0.0)
+            continue
+
+        try:
+            prev_points = list(p.history["total_points"])+list(p.score)
+            minutes_played = list(p.history["minutes"])
+        except AttributeError:
+            print(f"No history found for {p.display()}")
+            p.score.append(0.0)
+            continue
+        
+        minute_factor = 1.0
+        if np.mean(minutes_played[-2:]) < 60.0:
+            minute_factor = 0.5
+
+        if len(prev_points) <= 4:
+            p.score.append(np.mean(prev_points)*n_matches*minute_factor)
+            continue
+        
+        average = np.mean(prev_points[-4:])
+
+        forecaster.fit(y=pd.Series(prev_points))
+        try:
+            prediction = forecaster.predict(steps=1).values[0]
+        except IndexError:
+            print(f"Unable to fit data for {p.display()}")
+            prediction = average
+
+        sc = min(average,prediction)
+        if sc < 0.0:
+            sc = max(average,prediction)
+
+        p.score.append(sc*n_matches*minute_factor)
+
+game_week = 4
 
 url_base = "https://fantasy.eliteserien.no/api/"     
 
@@ -223,14 +272,14 @@ not_playing = {}
 #not_playing["Viking FK"] = ["Haugen"]
 #not_playing["Stabæk"] = []
 #not_playing["Sarpsborg 08"] = []
-not_playing["Molde"] = ["Linnes"]
+#not_playing["Molde"] = ["Linnes"]
 #not_playing["Tromsø"] = ["Totland"]
 #not_playing["Lillestrøm"] = ["Pettersson"]
 #not_playing["Kristiansund BK"] = ["Strand Nilsen"]
 #not_playing["Strømsgodset"] = ["Myhra"]
 #not_playing["Sandefjord"] = ["Jónsson"]
 
-horizon = 1
+horizon = 2
 for i in range(horizon):
 
     home_teams,away_teams,difficulty = ri.scrape_fixtures(url_base,teams,game_week+i)
@@ -239,6 +288,7 @@ for i in range(horizon):
     #calculate_expected_score_big_model(players,home_teams,away_teams,game_week-1,i)
     #calculate_expected_score_points_model(players,home_teams,away_teams)
     calculate_expected_score_from_form(players,home_teams,away_teams)
+    #calculate_smart_score(players,home_teams,away_teams)
 
     if i == 0:
         for team, out in not_playing.items():
@@ -267,7 +317,7 @@ spiss_rush = False
 
 
 n_max_transf = 2
-n_free_transf = 1
+#n_free_transf = 1
 
 if rik_onkel:    
     team_worth = 10000

@@ -1189,26 +1189,29 @@ def create_big_simple_model(players,save=False):
 
 
 
+def main():
 
+    seasons = ["2018-19","2019-20","2020-21"]
+        
+    players = {}
+    for i,season in enumerate(seasons):
+        print("reading season ",season)
+        
+        p = get_player_stats(season)
 
-seasons = ["2018-19","2019-20","2020-21"]
+        for k,v in p.items():
+            players[k+i*10000] = v
 
-players = {}
-for i,season in enumerate(seasons):
-    print("reading season ",season)
-    
-    p = get_player_stats(season)
+    test_model(players,plot=True,save=False)    
 
-    for k,v in p.items():
-        players[k+i*10000] = v
+    #create_big_fdr_model(players,save=True)    
+    #create_average_fdr_model(players,save=True)
 
-test_model(players,plot=True,save=False)    
+    #create_fdr_points_model(players,save=False)
+    #create_simple_points_model(players,save=False)
 
-#create_big_fdr_model(players,save=True)    
-#create_average_fdr_model(players,save=True)
+    #create_average_simple_model(players,save=True)
+    #create_big_simple_model(players,save=True)    
 
-#create_fdr_points_model(players,save=False)
-#create_simple_points_model(players,save=False)
-
-#create_average_simple_model(players,save=True)
-#create_big_simple_model(players,save=True)    
+if __name__ == "__main__":
+    main()

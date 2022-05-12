@@ -307,7 +307,7 @@ def create_player_history(url_base,filename,game_week,wait_time=0.1):
     
 def read_player_history(file,players):
 
-    with open(file,"r") as f:
+    with open(file,"r",encoding="utf-8") as f:
         lines = [l for l in f]
         
     attr_dict = {}

@@ -213,13 +213,16 @@ def calculate_smart_score(players,home_teams,away_teams):
             continue
         
         minute_factor = 1.0
-        if np.mean(minutes_played[-2:]) < 60.0:
-            minute_factor = 0.5
+        if len(minutes_played) > 1:
+            if(minutes_played[-1] < 60):
+                minute_factor *= 0.75
+            if(minutes_played[-2] < 60):
+                minute_factor *= 0.75
 
         if len(prev_points) <= 4:
             p.score.append(np.mean(prev_points)*n_matches*minute_factor)
             continue
-        
+                  
         average = np.mean(prev_points[-4:])
 
         forecaster.fit(y=pd.Series(prev_points))
@@ -235,7 +238,7 @@ def calculate_smart_score(players,home_teams,away_teams):
 
         p.score.append(sc*n_matches*minute_factor)
 
-game_week = 33
+game_week = 35
     
 url_base = "https://fantasy.premierleague.com/api/"
     
@@ -262,9 +265,9 @@ not_playing = {}
 #not_playing["Everton"] = ["Doucouré"]
 #not_playing["Leicester"] = ["Tielemans"]
 #not_playing["Watford"] = ["Dennis"]
-not_playing["Man Utd"] = ["Fred"]
+#not_playing["Man Utd"] = ["Fred"]
 #not_playing["West Ham"] = ["Bowen"]
-not_playing["Arsenal"] = ["Tierney"]
+#not_playing["Arsenal"] = ["Tierney"]
 
 horizon = 1
 
@@ -297,7 +300,7 @@ print("")
 n_max_transf = 15
 
 bench_boost = False
-wild_card = True
+wild_card = False
 
 if wild_card:    
     n_free_transf = 15
