@@ -189,12 +189,21 @@ def calculate_expected_score_from_form(players,home_teams,away_teams):
             continue            
 
         prev_points = list(p.history["total_points"])+list(p.score)        
-        n = len(prev_points)
+        
+        #print(np.mean(prev_points[-4:]),np.median(prev_points[-4:]))
 
-        average = np.mean(prev_points)
+        prev = prev_points[-5:]
+        i_min = np.argmin(prev)
+        i_max = np.argmax(prev)
+        prev = [val for i,val in enumerate(prev) if i != i_min and i != i_max]
 
-        score = 0.9*average * (n_home+0.9*n_away)
+        average = np.median(prev)
+
+        score = average * (n_home+0.9*n_away)
+        #score = np.median(prev_points[-4:]) * (n_home+0.9*n_away)
+        #print(score,np.median(prev_points[-6:]) * (n_home+0.9*n_away))
         p.score.append(score)
+
             
 def calculate_smart_score(players,home_teams,away_teams):
 
@@ -241,11 +250,18 @@ def calculate_smart_score(players,home_teams,away_teams):
 
         sc = min(average,prediction)
         if sc < 0.0:
-            sc = max(average,prediction)
+            sc = 0.0
+
+        #if prediction < -2 or prediction > 10:
+        #    print(p.name,average,prediction,prev_points)
+
+        #if sc < 0.0:
+        #    sc = max(average,prediction)
 
         p.score.append(sc*n_matches*minute_factor)
 
-game_week = 4
+
+game_week = 16
 
 url_base = "https://fantasy.eliteserien.no/api/"     
 
@@ -264,20 +280,23 @@ except FileNotFoundError:
 
 not_playing = {}
 #not_playing["Odd"] = ["Jonassen"]
-#not_playing["Bodø/Glimt"] = ["Vetlesen"]
-#not_playing["Rosenborg"] = ["Andersson"]
-#not_playing["FK Haugesund"] = ["Desler"]
+#not_playing["Bodø/Glimt"] = ["Pellegrino"]
+#not_playing["Rosenborg"] = ["Sæter"]
+#not_playing["FK Haugesund"] = ["Søderlund"]
 #not_playing["Vålerenga"] = ["Dønnum","Borchgrevink"]
 #not_playing["Mjøndalen"] = ["Thomas"]
-#not_playing["Viking FK"] = ["Haugen"]
+#not_playing["Viking FK"] = ["Berisha"]
 #not_playing["Stabæk"] = []
-#not_playing["Sarpsborg 08"] = []
-#not_playing["Molde"] = ["Linnes"]
+not_playing["Sarpsborg 08"] = ["Maigaard"]
+#not_playing["Molde"] = ["Wolff Eikrem"]
 #not_playing["Tromsø"] = ["Totland"]
-#not_playing["Lillestrøm"] = ["Pettersson"]
+#not_playing["Lillestrøm"] = ["Helland"]
 #not_playing["Kristiansund BK"] = ["Strand Nilsen"]
-#not_playing["Strømsgodset"] = ["Myhra"]
-#not_playing["Sandefjord"] = ["Jónsson"]
+#not_playing["Strømsgodset"] = ["Valsvik"]
+#not_playing["Sandefjord"] = ["Ofkir"]
+#not_playing["Hamkam"] = ["Kurucay"]
+
+
 
 horizon = 2
 for i in range(horizon):
@@ -292,17 +311,18 @@ for i in range(horizon):
 
     if i == 0:
         for team, out in not_playing.items():
-            
+
             for p in players:
                 if p.team != team:
                     continue
                 if p.name in out:
-                    p.score[i] = 0.0
+                    p.score[i] *= 0.0
 
-team_worth = bank
+team_worth = bank #-1.3
 print("Existing players:")
 for p in existing_players:
     p.display()
+    print("\t",p.history["total_points"])
     team_worth += p.cost
 
 #sc = [p.score[0] for p in players]
@@ -316,7 +336,7 @@ rik_onkel = False
 spiss_rush = False
 
 
-n_max_transf = 2
+n_max_transf = 1
 #n_free_transf = 1
 
 if rik_onkel:    

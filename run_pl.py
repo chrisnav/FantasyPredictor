@@ -238,7 +238,7 @@ def calculate_smart_score(players,home_teams,away_teams):
 
         p.score.append(sc*n_matches*minute_factor)
 
-game_week = 35
+game_week = 38
     
 url_base = "https://fantasy.premierleague.com/api/"
     
@@ -299,13 +299,14 @@ print("")
 
 n_max_transf = 15
 
-bench_boost = False
+bench_boost = True
 wild_card = False
 
 if wild_card:    
     n_free_transf = 15
     n_max_transf = 15
     
+n_free_transf = 1
 
 #solver_path = r"C:\Users\Christian\CPLEX 20_10\cplex.exe"
 solver_path = r"C:\My Stuff\CPLEX 20\cplex.exe"
